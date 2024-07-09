@@ -38,4 +38,38 @@ $(document).ready(() => {
   $(".d-footer-rating svg").on("mouseover", function () {
     $(this).addClass("d-stars");
   });
+
+ // open and close cart details
+  $('#d-cart-nav').click(function(){
+    $('#d-cart-modal').css('display', 'flex')
+    $('#d-cart-info').animate({'left': '0'})
+    $('body').css('overflow', 'hidden')
+  })
+
+  $('#d-close-cart').click(function(){
+    $('#d-cart-info').animate({'left': '100%'})
+    $('#d-cart-modal').css('display', 'none')
+    $('body').css('overflow', 'visible')
+  })
+
+  
+ // open and close hamburger menu
+ let clicked = true
+ $('#d-hamburger-menu-icon').click(function(){
+  if(clicked){
+    $('#d-hamburger-menu').animate({'left': '0'})
+    $('body').css('overflow', 'hidden')
+  }
+  else{
+    $('#d-hamburger-menu').animate({'left': '-100%'})
+    $('body').css('overflow', 'visible')
+  }
+ clicked =!clicked
+})
+
+// $('#d-close-cart').click(function(){
+//   $('#d-cart-info').animate({'left': '100%'})
+//   $('#d-cart-modal').css('display', 'none')
+//   $('body').css('overflow', 'visible')
+// })
 });
