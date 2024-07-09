@@ -386,6 +386,7 @@ footer ul a:hover {
 .d-footer-input input {
   border: none;
   color: blue;
+  width: 100%;
 }
 
 .d-footer-input input::placeholder {
@@ -407,7 +408,7 @@ footer ul a:hover {
   -ms-border-radius: 30px;
   -o-border-radius: 30px;
   font-size: 12px;
-  width: 50%;
+  width: 100%;
 }
 
 .d-footer-input button:hover {
