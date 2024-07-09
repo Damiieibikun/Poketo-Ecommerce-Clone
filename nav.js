@@ -66,10 +66,4 @@ $(document).ready(() => {
   }
  clicked =!clicked
 })
-
-// $('#d-close-cart').click(function(){
-//   $('#d-cart-info').animate({'left': '100%'})
-//   $('#d-cart-modal').css('display', 'none')
-//   $('body').css('overflow', 'visible')
-// })
 });

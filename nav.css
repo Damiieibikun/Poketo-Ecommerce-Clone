@@ -10,7 +10,7 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-/* common styles */
+/* Common styles */
 
 .d-flex {
   display: flex;
@@ -47,7 +47,7 @@ body {
 .d-display-none {
   display: none;
 }
-/* nav styles */
+/* Nav styles */
 
 .d-top-container {
   background-color: #0085ca;
@@ -67,8 +67,6 @@ body {
   position: relative;
 }
 
-
-
 .d-sticky-nav {
   position: fixed;
   top: 0;
@@ -86,7 +84,8 @@ body {
 }
 
 #logo-responsive, 
-#d-hamburger-menu{
+#d-hamburger-menu, 
+#d-hamburger-menu-icon{
   display: none;
 }
 
@@ -166,8 +165,6 @@ height: 80vh;
   justify-content: end;
   color: black;
   letter-spacing: 0.1px;
-
-
  }
 
 #d-cart-info{
@@ -183,8 +180,6 @@ height: 80vh;
 #d-close-cart:hover{
 cursor: pointer;
 }
-
-
 
 #d-cart-header{
   justify-content: space-between;
@@ -446,7 +441,9 @@ footer ul a:hover {
   #logo{
     display: none;
   }
-  #logo-responsive, #d-hamburger-menu{
+  #logo-responsive, 
+  #d-hamburger-menu,
+  #d-hamburger-menu-icon{
     display: flex;
   }
   .bi-search, .bi-person{
@@ -470,7 +467,9 @@ footer ul a:hover {
   #logo{
     display: none;
   }
-  #logo-responsive, #d-hamburger-menu{
+  #logo-responsive, 
+  #d-hamburger-menu,
+  #d-hamburger-menu-icon{
     display: flex;
   }
   .bi-search, .bi-person{
