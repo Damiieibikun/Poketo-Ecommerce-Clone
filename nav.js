@@ -4,8 +4,11 @@ $(document).ready(() => {
   $(window).on("scroll", function () {
     if (window.pageYOffset > sticky) {
       $("#d-fixedNav").addClass("d-sticky-nav");
+      $('#d-shop-family').slideUp();
+
     } else {
       $("#d-fixedNav").removeClass("d-sticky-nav");
+      $('#d-shop-family').slideDown();
     }
   });
 

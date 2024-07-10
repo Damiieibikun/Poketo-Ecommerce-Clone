@@ -241,7 +241,7 @@ cursor: pointer;
 
 }
 
-#d-amt-items{
+.d-amt-items{
   width: 30px; 
   border: none; 
   text-align: center;
