@@ -1,0 +1,47 @@
+#d-hero-slider {
+    grid-template-columns: repeat(2, 1fr);
+    height: 100vh;
+    background-color: #EF4043;
+    color: white
+}
+
+.d-hero-items {
+    align-items: start;
+}
+
+#d-hero-items-txt {
+    width: 85%;
+    margin: auto;
+}
+
+#d-hero-items-txt button {
+    font-size: 16px;
+    border: none;
+    padding: 16px 33px;
+    border-radius: 30px;
+    width: 30%;
+}
+
+#d-hero-items-txt button:hover {
+    cursor: pointer;
+    background-color: #FBCACB;
+}
+
+#d-hero-items-img {
+    background-image: url('https://www.poketo.com/cdn/shop/files/pk_5050_hero_vibrant_binder_clips.webp?v=1719483839&width=1070');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* media queries */
+
+@media screen and (max-width: 786px) {
+    #d-hero-items-txt button {
+        width: 100%;
+    }
+    #d-hero-slider {
+        grid-template-columns: 1fr;
+    }
+}
