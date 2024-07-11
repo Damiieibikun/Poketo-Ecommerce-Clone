@@ -5,13 +5,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nav and Footer Template</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 
-    <link rel="stylesheet" href="nav.css" />
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Signika:wght@300..700&display=swap" rel="stylesheet" />
     <!-- Include your css links or google fonts here -->
+    <link rel="stylesheet" href="nav.css" />
     <link rel="stylesheet" href="index.css">
     <!-- ... -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> -->
 </head>
 
 <body>
@@ -382,7 +384,7 @@
                 <path
                   d="M9.89,16.19a2,2,0,0,1-1.57.74,2.27,2.27,0,0,1,.56-1.63,2.35,2.35,0,0,1,1.56-.8,2.32,2.32,0,0,1-.55,1.69m.55.86c-.87-.05-1.61.49-2,.49s-1-.46-1.74-.45A2.58,2.58,0,0,0,4.5,18.41c-.93,1.61-.24,4,.67,5.31.44.64,1,1.36,1.67,1.33s.92-.43,1.72-.43,1,.43,1.73.42,1.18-.65,1.63-1.3a5.74,5.74,0,0,0,.72-1.49,2.34,2.34,0,0,1-1.41-2.14,2.4,2.4,0,0,1,1.14-2,2.5,2.5,0,0,0-1.93-1.05m5-1.81V25H17V21.64h2.09a3.08,3.08,0,0,0,3.25-3.2,3.06,3.06,0,0,0-3.2-3.2ZM17,16.52H18.7a1.81,1.81,0,0,1,2.06,1.92,1.83,1.83,0,0,1-2.07,1.94H17ZM25.06,25a2.5,2.5,0,0,0,2.22-1.24h0V25h1.4V20.13c0-1.41-1.12-2.31-2.85-2.31S23.07,18.74,23,20h1.36a1.33,1.33,0,0,1,1.43-1c.92,0,1.44.44,1.44,1.23v.53l-1.89.12c-1.75.1-2.7.82-2.7,2.07A2.14,2.14,0,0,0,25.06,25Zm.4-1.15c-.8,0-1.31-.39-1.31-1s.49-1,1.43-1l1.68-.11v.55A1.64,1.64,0,0,1,25.46,23.89Zm5.12,3.72c1.47,0,2.16-.56,2.77-2.26L36,17.91H34.47l-1.78,5.75h0l-1.78-5.75H29.3L31.86,25l-.14.43a1.21,1.21,0,0,1-1.27,1l-.45,0v1.17A5.35,5.35,0,0,0,30.58,27.61Z"
                   data-name="<Compound Path>"
-                  id="Compound_Path"
+                  id="_Compound_Path_"
                 ></path>
               </g>
             </svg>
@@ -639,7 +641,57 @@
         </div>
     </section>
 
-    
+    <section id="d-marquee">
+        <h2 style="text-align: center;">As Seen In</h2>
+        <marquee behavior="scroll" direction="" class="d-flex d-gap-20 d-align-center d-align-center">
+            <img src="https://www.poketo.com/cdn/shop/files/pk_design_milk_light_0bd5a3ed-db3f-4dc4-962a-51af0306a90b.webp?v=1699294095&width=600" alt="1">
+            <img src="https://www.poketo.com/cdn/shop/files/pk_strategist_light_d96fd43f-4355-46d6-937e-914b17400bcd.webp?v=1699294107&width=600" alt="2">
+            <img src="https://www.poketo.com/cdn/shop/files/pk_people_light_8b7a0338-56dc-41f8-8c74-7a2b1df7dacd.webp?v=1699294118&width=600" alt="3">
+            <img src="https://www.poketo.com/cdn/shop/files/pk_real_simple_light_a0a072b0-0b39-40f5-96db-0131daf6a2f6.webp?v=1699294339&width=600" alt="4">
+            <img src="https://www.poketo.com/cdn/shop/files/pk_fortune_light_1dd32c88-f5dd-435e-9e67-262d70d28f70.webp?v=1699294140&width=600" alt="5">
+            <img src="https://www.poketo.com/cdn/shop/files/pk_bonapetit_light_be8fbea8-2469-4477-b664-a4a6c496060e.webp?v=1699294151&width=600" alt="6">
+            <img src="https://www.poketo.com/cdn/shop/files/pk_clever_light_29bcb1bf-ad02-4028-9257-39017b1a064a.webp?v=1699294183&width=600" alt="7">
+            <img src="https://www.poketo.com/cdn/shop/files/pk_dwell_light_e9066291-3739-4bad-93a8-f9ea0b03d614.webp?v=1699294195&width=600" alt="8">
+        </marquee>
+    </section>
+
+    <section id="d-first-slider">
+        <h1>Your best laid plans start with our best sellers.</h1>
+        <div class="slider-nav1 d-slick-slider">
+
+        </div>
+    </section>
+    <section id="d-marquee2">
+        <marquee behavior="scoll" direction="">
+            <h1>Designed to Elevate the Everyday• &nbsp; &nbsp; Designed to Elevate the Everyday• &nbsp; &nbsp; Designed to Elevate the Everyday•</h1>
+        </marquee>
+    </section>
+
+    <section id="d-hero2">
+        <div class="d-grid d-hero2-grid d-align-center d-gap-20">
+            <div>
+                <h1>
+                    Dreams On Full Display
+                </h1>
+
+                <p>Create your own gallery wall with our eye-catching Spectrum Wall Planner. <br>Prefer to take it month by month? Hang one at a time and change them out as <br>they come.</p>
+                <button type="button">Shop Now</button>
+            </div>
+
+            <div id="d-hero2-img"></div>
+        </div>
+
+    </section>
+
+    <section id="d-second-slider">
+        <h1>The Poketo x Headspace Collection</h1>
+        <div class="slider-nav2 d-slick-slider">
+
+        </div>
+    </section>
+
+
+
 
     <!-- DO NOT EDIT ANYTHING FROM BELOW -->
     <!-- Fixed bottom -->
@@ -797,9 +849,13 @@
         </div>
     </footer>
 
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="nav.js "></script>
     <!-- Include your other js scripts here -->
     <!-- DONT INCLUDE JQUERY SCRIPT, ALREADY AT THE TOP-->
+
     <script src="index.js"></script>
     <!-- ... -->
 </body>
