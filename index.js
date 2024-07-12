@@ -365,7 +365,7 @@ $(document).ready(function() {
         let productItem1 = $(` <div class="d-slick-items d-grid d-justify-center">
                 <div class="d-slider-product-item d-flex" id="d-slider-product${product.id}" style="background-image: url(${product.img})" onMouseOver="this.style.backgroundImage='url(${product.imgHover})'" onMouseOut="this.style.backgroundImage='url(${product.img})'">
                     <div class="d-item-tag" style="background-color: ${product.tagColor}">${product.tag}</div>
-                    <button class="d-addCart-home d-display-none">Add to Cart</button>
+                    <button class="d-addCart d-display-none">Add to Cart</button>
                 </div>
                 <div class="d-slider-product-desc">
                     <p class="d-product-title-slider">${product.productName}</p>
@@ -430,7 +430,7 @@ $(document).ready(function() {
         let productItem2 = $(`<div class="d-slick-items d-grid d-justify-center">
             <div class="d-slider-product-item d-flex" id="d-slider-product${product.id}" style="background-image: url(${product.img})" onMouseOver="this.style.backgroundImage='url(${product.imgHover})'" onMouseOut="this.style.backgroundImage='url(${product.img})'">
                 <div class="d-item-tag" style ="background-color: ${product.tagColor}">${product.tag}</div>
-                <button class="d-addCart-home d-display-none">Add to Cart</button>
+                <button class="d-addCart d-display-none">Add to Cart</button>
             </div>
             <div class="d-slider-product-desc">
                 <p class="d-product-title-slider">${product.productName}</p>
@@ -468,11 +468,11 @@ $(document).ready(function() {
 
 
     $('.d-slider-product-item').mouseover(function() {
-        $(this).find('.d-addCart-home').show()
+        $(this).find('.d-addCart').show()
     })
 
     $('.d-slider-product-item').mouseout(function() {
-        $(this).find('.d-addCart-home').hide()
+        $(this).find('.d-addCart').hide()
     })
 
 
