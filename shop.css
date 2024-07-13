@@ -1,0 +1,90 @@
+            #d-shopAll-hero {
+                background-color: #F6EDE6;
+            }
+            
+            .d-shopAll-hero-txt {
+                width: 80%;
+                margin: auto;
+            }
+            
+            .d-shopAll-hero-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .d-shopAll-hero-grid h1 {
+                font-size: 38px;
+            }
+            
+            #d-shopAll-hero-img {
+                height: 420px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-image: url('https://www.poketo.com/cdn/shop/files/poketo_stationery_lifestyle0769_copia.jpg?v=1708603444&width=750');
+            }
+            
+            #d-shopAll-grid {
+                width: 90%;
+                margin: auto;
+                padding: 30px 0;
+            }
+            
+            #d-shopAll-filter {
+                font-size: 14px;
+                font-weight: 500;
+            }
+            
+            #d-featured {
+                border: 1px solid #0085CA;
+                border-radius: 30px;
+                width: 45%;
+                padding: 10px 0 10px 10px;
+            }
+            
+            #d-shopAll-filter-mini {
+                display: none;
+            }
+            
+            #d-shopAll-grid-items {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            
+            .d-slider-product-item {
+                margin-right: 0;
+            }
+            /* Media queries */
+            
+            @media screen and (max-width: 1024px) and (min-width: 786px) {
+                #d-shopAll-grid-items {
+                    grid-template-columns: 1fr 1fr;
+                }
+                .d-slider-product-item {
+                    width: 300px;
+                    justify-self: center;
+                }
+                #d-shopAll-filter {
+                    display: none;
+                }
+                #d-shopAll-filter-mini {
+                    display: flex;
+                }
+            }
+            
+            @media screen and (max-width: 786px) {
+                .d-shopAll-hero-grid {
+                    grid-template-columns: 1fr;
+                }
+                #d-shopAll-filter {
+                    display: none;
+                }
+                #d-shopAll-filter-mini {
+                    display: flex;
+                }
+                #d-shopAll-grid-items {
+                    grid-template-columns: 1fr;
+                }
+                .d-slider-product-item {
+                    width: 300px;
+                    justify-self: center;
+                }
+            }

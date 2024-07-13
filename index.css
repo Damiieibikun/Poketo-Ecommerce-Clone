@@ -253,6 +253,10 @@
     font-weight: 500;
 }
 
+.d-addCart:hover {
+    cursor: pointer;
+}
+
 .d-item-tag {
     position: absolute;
     top: 10px;
