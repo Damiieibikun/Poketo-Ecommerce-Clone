@@ -92,13 +92,13 @@ $(document).ready(() => {
   });
 
   // Current User's Cart info
-  let userProducts = JSON.parse(localStorage.getItem("UserProducts")) || [];
+  let allUsers = JSON.parse(localStorage.getItem("allUsers")) || [];
   let currentUser = localStorage.getItem("CurrentUser")
-  if(userProducts.length === 0 || currentUser === null){
+  if(allUsers.length === 0 || currentUser === null){
     $("#d-checkout-btn").text("CONTINUE SHOPPING");
     $("#d-cart-contents").css("height", "47vh");
   }
-  userProducts.forEach((user) => {
+  allUsers.forEach((user) => {
     if (currentUser === user) {
       // check if cart is empty
       let cartItemNumber = user.cartInfo.length
