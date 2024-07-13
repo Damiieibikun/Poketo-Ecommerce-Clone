@@ -15,12 +15,19 @@
 }
 
 #d-hero-items-txt button,
-.d-hero2-grid button {
+.d-hero2-grid button,
+.d-hero3-grid button,
+.d-hero4-grid button,
+.d-hero5-grid button {
     font-size: 16px;
     border: none;
     padding: 16px 33px;
     border-radius: 30px;
-    width: 30%;
+    width: 50%;
+}
+
+.d-hero4-grid button {
+    width: 70%;
 }
 
 #d-hero-items-txt button:hover {
@@ -61,7 +68,28 @@
     background-color: #E2E0F8;
 }
 
-.d-hero2-grid {
+#d-hero3 {
+    background-color: #FFD46F;
+}
+
+#d-hero4 {
+    background-color: #B3E5B4;
+}
+
+#d-hero5 {
+    background-color: #A38AC1;
+    color: white;
+}
+
+.d-hero2-5-txt {
+    width: 80%;
+    margin: auto;
+}
+
+.d-hero2-grid,
+.d-hero3-grid,
+.d-hero4-grid,
+.d-hero5-grid {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
     width: 90%;
@@ -69,27 +97,64 @@
     padding: 50px 0;
 }
 
-.d-hero2-grid h1 {
+.d-hero2-grid h1,
+.d-hero3-grid h1,
+.d-hero4-grid h1,
+.d-hero5-grid h1 {
     font-size: 38px;
 }
 
-.d-hero2-grid button {
+.d-hero2-grid button,
+.d-hero3-grid button,
+.d-hero4-grid button {
     background-color: #0085CA;
     color: white;
 }
 
-.d-hero2-grid button:hover {
+.d-hero5-grid button {
+    background-color: white;
+    color: black;
+}
+
+.d-hero2-grid button:hover,
+.d-hero3-grid button:hover,
+.d-hero4-grid button:hover {
     background-color: #3F9ED7;
     cursor: pointer;
 }
 
-#d-hero2-img {
-    background-image: url('https://www.poketo.com/cdn/shop/files/pk_5050_6_4.webp?v=1717159237&width=1500');
+.d-hero5-grid button:hover {
+    background-color: #E5DEEE;
+    cursor: pointer;
+}
+
+#d-hero2-img,
+#d-hero3-img,
+#d-hero4-img,
+#d-hero5-img {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 600px;
+}
+
+#d-hero2-img {
+    background-image: url('https://www.poketo.com/cdn/shop/files/pk_5050_6_4.webp?v=1717159237&width=1500');
     border-radius: 17px;
+}
+
+#d-hero3-img {
+    background-image: url('https://www.poketo.com/cdn/shop/files/pk_m_home_bis_poketo_x_headspace.webp?v=1707924533&width=1500');
+}
+
+#d-hero4-img {
+    background-image: url('https://www.poketo.com/cdn/shop/files/pk_5050_store.webp?v=1708087342&width=1070');
+}
+
+#d-hero5-img {
+    background-image: url('https://www.poketo.com/cdn/shop/files/XPB-M-Home-5050-Media-PatternFamily-01-2x.jpg?v=1679056208&width=1070');
+    background-size: contain;
+    height: 450px;
 }
 /*slider slick */
 
@@ -228,6 +293,42 @@
     font-weight: 500;
     font-size: 14px;
 }
+
+#d-insta-vids {
+    text-align: center;
+    margin: 50px 0;
+}
+
+#d-insta-vids h1 {
+    font-size: 62px;
+    font-weight: 600;
+    margin: 0;
+}
+
+#d-insta-vids a {
+    color: #0085CA;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+#d-insta-vids-grid {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#d-insta-vids-grid div {
+    width: 100%;
+    height: auto;
+}
+
+#d-insta-vids-grid video,
+#d-insta-vids-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 /* media queries */
 
 @media screen and (max-width: 1360px) {
@@ -237,16 +338,55 @@
     }
 }
 
+@media screen and (max-width: 1024px) and (min-width:786px) {
+    #d-insta-vids-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    #d-insta-vids-grid video,
+    #d-insta-vids-grid img {
+        height: 300px;
+        object-fit: cover;
+    }
+}
+
 @media screen and (max-width: 786px) {
     #d-hero-items-txt button,
-    .d-hero2-grid button {
+    .d-hero2-grid button,
+    .d-hero3-grid button,
+    .d-hero4-grid button,
+    .d-hero5-grid button {
         width: 100%;
     }
     #d-hero-slider {
         grid-template-columns: 1fr;
     }
-    .d-hero2-grid {
+    .d-hero2-grid,
+    .d-hero3-grid,
+    .d-hero4-grid,
+    .d-hero5-grid {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
+    }
+}
+
+@media screen and (max-width: 786px) and (min-width:425px) {
+    #d-insta-vids-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    #d-insta-vids-grid video,
+    #d-insta-vids-grid img {
+        height: 300px;
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    #d-insta-vids-grid {
+        grid-template-columns: 1fr;
+    }
+    #d-insta-vids-grid video,
+    #d-insta-vids-grid img {
+        height: 300px;
+        object-fit: cover;
     }
 }
