@@ -15,7 +15,6 @@ $(document).ready(() => {
   $("#d-left-nav")
     .find("li")
     .each((i, element) => {
-      console.log(element.id);
       if (element.id === "d-showDropdown") {
         $(element).on("mouseover", function () {
           $("#d-nav-dropdown-menu").removeClass("d-display-none");
@@ -54,6 +53,31 @@ $(document).ready(() => {
     $("body").css("overflow", "visible");
   });
 
+  // redirect to login
+  $("#d-account-nav").click(function () {
+ window.location.href = "login.html";
+  })
+
+  $('.d-AddBtn-cart').click(function(){
+    window.location.href = "login.html";
+  })
+  //redirect to home
+  $('#logo').click(function(){
+    window.location.href = "index.html";
+  })
+
+  $('#logo-responsive').click(function(){
+    window.location.href = "index.html";
+  })
+
+  $('#d-checkout-btn').click(function(){
+    if($(this).text() === 'CONTINUE SHOPPING'){
+      window.location.href = "index.html";
+    }
+    else{
+      console.log('Checkout')
+    }
+  })
   // open and close hamburger menu
   let clicked = true;
   $("#d-hamburger-menu-icon").click(function () {
@@ -69,7 +93,8 @@ $(document).ready(() => {
 
   // Current User's Cart info
   let userProducts = JSON.parse(localStorage.getItem("UserProducts")) || [];
-  if(userProducts.length === 0){
+  let currentUser = localStorage.getItem("CurrentUser")
+  if(userProducts.length === 0 || currentUser === null){
     $("#d-checkout-btn").text("CONTINUE SHOPPING");
     $("#d-cart-contents").css("height", "47vh");
   }
@@ -102,9 +127,9 @@ $(document).ready(() => {
                 width="30%"
               />
               <div class="d-flex-col" style="justify-content: space-between">
-                <p id="d-title-item">${item.productName}</p>
-                <p id="d-chosenColor-item"> Red</p>
-                <p id="d-price-item">$${item.price}</p>
+                <p class="d-title-item">${item.productName}</p>
+                <p class="d-chosenColor-item"> Red</p>
+                <p class="d-price-item">$${item.price}</p>
               </div>
             </div>
 

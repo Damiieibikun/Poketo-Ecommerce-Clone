@@ -90,13 +90,16 @@ body {
   display: none;
 }
 
+#logo:hover, #logo-responsive:hover{
+  cursor: pointer;
+}
+
 #d-hamburger-menu{
 background-color: white;
 padding: 0 25px;
 width: fit-content;
-position: absolute;
+position: fixed;
 left: -100%;
-top: 100px;
 overflow-y: scroll;
 z-index: 50;
 height: 80vh;
@@ -188,17 +191,21 @@ height: 80vh;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
 }
-#d-title-item,
-#d-chosenColor-item,
-#d-price-item{
+
+.d-AddBtn-cart:hover{
+cursor: pointer;
+}
+.d-title-item,
+.d-chosenColor-item,
+.d-price-item{
   margin: 0;
 }
 
-#d-title-item,
-#d-price-item{
+.d-title-item,
+.d-price-item{
   font-weight: 500;
 }
-#d-chosenColor-item{
+.d-chosenColor-item{
   font-size: 14px;
 }
 
@@ -244,7 +251,9 @@ cursor: pointer;
   -ms-border-radius: 30px;
   -o-border-radius: 30px;
 }
-
+#d-checkout-btn:hover{
+  cursor: pointer;
+}
 #d-payment-options{
   margin-top: 20px;
 }
