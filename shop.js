@@ -8,7 +8,7 @@ $(document).ready(() => {
         }
 
         let productItem = $(`<div class="d-grid">
-                <div class="d-slider-product-item d-flex" id="d-slider-product${product.id}" style="background-image: url(${product.img})" onMouseOver="this.style.backgroundImage='url(${product.imgHover})'" onMouseOut="this.style.backgroundImage='url(${product.img})'">
+                <div class="d-slider-product-item d-flex" data-id = ${product.id} style="background-image: url(${product.img})" onMouseOver="this.style.backgroundImage='url(${product.imgHover})'" onMouseOut="this.style.backgroundImage='url(${product.img})'">
                     <div class="d-item-tag" style="background-color: ${product.tagColor}">${product.tag}</div>
                     <button class="d-addCart d-display-none">Add to Cart</button>
                 </div>
@@ -69,5 +69,14 @@ $(document).ready(() => {
 
     $('.d-slider-product-item').mouseout(function() {
         $(this).find('.d-addCart').hide()
+    })
+
+    $('.d-slider-product-item').click(function() {
+        let selectedId = $(this).data('id');
+        products.forEach((item) => {
+            if (selectedId === item.id) {
+                localStorage.setItem('Selected-Product', JSON.stringify(item))
+            }
+        })
     })
 })

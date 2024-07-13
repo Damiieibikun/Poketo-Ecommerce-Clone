@@ -160,7 +160,7 @@ $(document).ready(function() {
         {
             id: 9,
             img: 'https://www.poketo.com/cdn/shop/files/PK-doublewall-mug-product-teal.webp?v=1710510149&width=500',
-            imgHover: 'https://www.poketo.com/cdn/shop/files/PK-ConceptPLanner-SpringCollection-Blocks-Back-Product.webp?v=1708515753&width=600',
+            imgHover: 'https://www.poketo.com/cdn/shop/files/PK-Lookbook-FW23-Glassware-DoubleWallMug-Teal_TEA_copy.webp?v=1710510171&width=500',
             tag: 'New Color',
             tagColor: '#ffc845',
             productName: 'Double Wall Mug',
@@ -353,6 +353,9 @@ $(document).ready(function() {
         ]
     });
 
+    // get all products
+    let products = JSON.parse(localStorage.getItem('Poketo-Products'))
+
     // get products for each slider
     let products1 = JSON.parse(localStorage.getItem('Poketo-Products')).splice(0, 9)
     let products2 = JSON.parse(localStorage.getItem('Poketo-Products')).splice(9)
@@ -363,7 +366,7 @@ $(document).ready(function() {
             showSize = 'flex'
         }
         let productItem1 = $(` <div class="d-slick-items d-grid d-justify-center">
-                <div class="d-slider-product-item d-flex" id="d-slider-product${product.id}" style="background-image: url(${product.img})" onMouseOver="this.style.backgroundImage='url(${product.imgHover})'" onMouseOut="this.style.backgroundImage='url(${product.img})'">
+                <div class="d-slider-product-item d-flex" data-id =${product.id} style="background-image: url(${product.img})" onMouseOver="this.style.backgroundImage='url(${product.imgHover})'" onMouseOut="this.style.backgroundImage='url(${product.img})'">
                     <div class="d-item-tag" style="background-color: ${product.tagColor}">${product.tag}</div>
                     <button class="d-addCart d-display-none">Add to Cart</button>
                 </div>
@@ -428,7 +431,7 @@ $(document).ready(function() {
             showStars = 'none'
         }
         let productItem2 = $(`<div class="d-slick-items d-grid d-justify-center">
-            <div class="d-slider-product-item d-flex" id="d-slider-product${product.id}" style="background-image: url(${product.img})" onMouseOver="this.style.backgroundImage='url(${product.imgHover})'" onMouseOut="this.style.backgroundImage='url(${product.img})'">
+            <div class="d-slider-product-item d-flex" data-id = ${product.id} style="background-image: url(${product.img})" onMouseOver="this.style.backgroundImage='url(${product.imgHover})'" onMouseOut="this.style.backgroundImage='url(${product.img})'">
                 <div class="d-item-tag" style ="background-color: ${product.tagColor}">${product.tag}</div>
                 <button class="d-addCart d-display-none">Add to Cart</button>
             </div>
@@ -475,5 +478,12 @@ $(document).ready(function() {
         $(this).find('.d-addCart').hide()
     })
 
-
+    $('.d-slider-product-item').click(function() {
+        let selectedId = $(this).data('id');
+        products.forEach((item) => {
+            if (selectedId === item.id) {
+                localStorage.setItem('Selected-Product', JSON.stringify(item))
+            }
+        })
+    })
 });
