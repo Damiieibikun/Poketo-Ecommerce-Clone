@@ -1,0 +1,141 @@
+.MaiN-Container{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    font-family: 'Sofia Sans', sans-serif;
+}
+
+.card-J{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* border: .5px solid rgba(128, 128, 128, 0.384);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.208); */
+    margin: auto;
+    width: 30%;
+    height: 500px;
+    
+}
+
+#LoginForm {
+    width: 100%;
+}
+
+.card-J h1{
+    font-size: 45px;
+    margin: 0;
+    font-weight: 600;
+}
+
+.inputs{
+    width: 100%;
+    /* padding: 10px 20px; */
+    height: 35px;
+    border: none;
+    margin-top: 30px;
+    background: #ddd;
+    color: #000;
+    
+
+}
+
+.forgot{
+    margin-top: 40px;
+    /* padding-left: 20px; */
+    display: flex;
+    justify-content: flex-start;
+    
+}
+
+.forgot a{
+    color: #000;
+}
+
+.forgot a:hover {
+    color: #8f8e8e;
+}
+
+.cret {
+    margin-top: 20px;
+
+}
+
+.cret a{
+    color: #000;
+}
+
+.cret a:hover {
+    color: #8f8e8e;
+}
+
+
+.Jbtn2{
+    margin-top: 15px;
+    padding: 10px 20px;
+    width: 100%;
+    height: 60px;
+    color: white;
+    background-color: #2b6df0;
+    border-radius: 30px;
+    outline: none;
+    font-weight: 600;
+    border: none;
+    transition: .3s ease;
+}
+
+.Jbtn2:hover {
+    background-color: #6392f0;
+}
+
+
+.error{
+    border-color: red;
+}
+
+.error-message{
+    color: red;
+    display: none;
+    margin: 0;
+    font-size: 12px;
+    margin-top: -4px;
+    position: absolute;
+    bottom: -15px;
+}
+
+
+
+.input1-div{
+    position: relative;
+}
+
+
+.input2-div {
+    position: relative;
+}
+
+
+
+
+/* media responsiveness */
+
+
+@media (min-width: 320px) and (max-width: 768px) {
+
+    .card-J{
+        display: grid;
+        width: 100%;
+        margin: auto;
+        grid-template-columns: 1fr;
+    }
+
+
+    .card-J input{
+        width: 100%;
+    }
+
+}
