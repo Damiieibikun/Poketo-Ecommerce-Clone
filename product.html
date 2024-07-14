@@ -12,6 +12,7 @@
     />
     <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
     <!-- Include your css links or google fonts here -->
+     <link rel="stylesheet" href="index.css">
 <link rel="stylesheet" href="product.css">
     <!-- ... -->
     <script
@@ -22,8 +23,8 @@
   </head>
 
   <body>
-    <!-- Navigation -->
-    <header>
+     <!-- Navigation -->
+     <header>
       <div class="d-top-container">
         <p>
           Free Shipping over $50
@@ -64,7 +65,7 @@
             <div>
               <ul class="d-flex d-gap-20" id="d-nav-links">
                 <li id="d-showDropdown">
-                  <a href="#"
+                  <a href="shop.html"
                     >Shop All
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -252,7 +253,7 @@
               <p>SHOP ALL</p>
               <ul>
                 <li>
-                  <a href="#">Shop All</a>
+                  <a href="shop.html">Shop All</a>
                 </li>
                 <li>
                   <a href="#">New Arrivals</a>
@@ -768,7 +769,7 @@
     <div id="d-hamburger-menu">
       <ul class="d-flex-col d-gap-20" id="d-nav-links-responsive">
         <li id="d-showDropdown">
-          <a href="#" class="d-flex d-align-center d-justify-between"
+          <a href="shop.html" class="d-flex d-align-center d-justify-between"
             >Shop All
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -881,45 +882,58 @@
         </li>
         <hr width="100%" />
         <li>
-          <a href="#">Login / Account</a>
+          <a href="login.html">Login / Account</a>
         </li>
       </ul>
+    </div>
+
+<div class="jenny-grid d-gap-20">
+    <div class="jenny-item">
+      <!-- <img style="height: 580px; width: 580px;" src="./images/calender.jpeg"  > -->
+   </div>
+   <div class="jenny-items">
+    <div id="j-selectedProduct-info" style="width: 100%;">
+       <!-- ....append.... -->
+ 
+
+      <!-- ..end.. -->
+  </div>
+
+  <div class="items-jenny">
+      <div
+      class="d-flex d-align-center d-justify-center"
+      id="d-add-remove-num"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        fill="currentColor"
+        class="bi bi-dash"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8"
+        />
+      </svg>
+      <input type="text" name="" class="d-amt-items" value="1" />
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        fill="currentColor"
+        class="bi bi-plus"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"
+        />
+      </svg>
     </div>
 
 
 
 
-  <div class="jenny-grid">
-    <div class="jenny-item">
-      <!-- <img style="height: 580px; width: 580px;" src="./images/calender.jpeg"  > -->
-   </div>
-   <div class="jenny-items">
-       <div class="mustard">
-           <p>NEW COLORS</p>
-       </div>
-       <h1>Stick To It Weekly Pad</h1>
-       <div class="jenny-flex">
-           <h3>$12</h3>
-            
-       </div>
-       <p>color:blue</p>
-       <div class="jenny-icons">
-             <img class="blu-ic" src="./images/blue-record.png">
-             <img style="height: 30px;" src="./images/orange-record.png">
-             <img style="height: 30px;" src="./images/red-record.png">
-             <img style="height: 30px;" src="./images/green-record.png">
-             <img style="height: 30px;" src="./images/whtie-record.png">
-       </div>
-       <div class="jenny-b">
-           <p style="color: blue;">Free Returns & Free Shipping over $50</p>
-       </div>
-
-       <div class="items-jenny">
-           <div class="jenny-btn">
-               <img style="height: 10px; width: 10px; padding-top: 15px; " src="./images/blu-minus.png" >
-               <p style="margin-bottom: 15;">1</p>
-               <img style="height: 10px; width: 10px; padding-top: 15px;" src="./images/blu-plus.png" >
-           </div>
            <button>Add to cart</button>
        </div>
 
@@ -928,7 +942,7 @@
        </h4>
        <a style="color: gray;" href="#">Read Less</a>  
        <div class= "butter">
-         <p>details</p>
+         <p>Details</p>
          <img style="width: 20px; height: 20px; padding-top: 18px;" src="./images/blu-plus.png">
        </div>
        <div class="butter2">
@@ -1228,7 +1242,7 @@
   <div class="gridJE">
     <div class="gridJE-items">
       <div style="display: flex; ">
-        <p style="font-size: 50px; margin-right: 5px; color: #2b6df0;">4.8</p>
+        <p style="font-size: 50px; margin-right: 5px; color: #0085ca;">4.8</p>
         <div style="display: flex; flex-direction: column;">
           <div style="display: flex; margin-top: 50px; gap:5px;">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ef4043" class="bi bi-star-fill"
@@ -1609,7 +1623,7 @@
         </div>
         <div style="display: flex; gap: 10px;">
           <p
-            style="margin: 0; align-items: center; background-color: #ddd; font-weight: 700; border-radius: 10px; padding: 2px; font-size: small;">
+            style="margin: 0; align-items: center; background-color: #ddd; font-weight: 700; border-radius: 10px; padding: 2px; font-size: small; text-align: center;">
             Verified by shop</p>
           <p style="margin: 0; align-items: center;">19/10/23</p>
         </div>
@@ -1685,7 +1699,7 @@
         </div>
         <div style="display: flex; gap: 10px;">
           <p
-            style="margin: 0; align-items: center; background-color: #ddd; font-weight: 700; border-radius: 10px; padding: 2px; font-size: small;">
+            style="margin: 0; align-items: center; background-color: #ddd; font-weight: 700; border-radius: 10px; padding: 2px; font-size: small; text-align: center;">
             Verified by shop</p>
           <p style="margin: 0; align-items: center;">14/12/23</p>
         </div>

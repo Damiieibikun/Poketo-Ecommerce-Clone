@@ -78,5 +78,7 @@ $(document).ready(() => {
                 localStorage.setItem('Selected-Product', JSON.stringify(item))
             }
         })
+
+        window.location.href = 'product.html'
     })
 })

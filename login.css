@@ -1,7 +1,6 @@
 .MaiN-Container{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: auto;
+  max-width: 30%;
     display: flex;
     justify-content: center;
     margin-top: 40px;
@@ -17,7 +16,7 @@
     /* border: .5px solid rgba(128, 128, 128, 0.384);
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.208); */
     margin: auto;
-    width: 30%;
+    width: 100%;
     height: 500px;
     
 }
@@ -125,6 +124,9 @@
 
 
 @media (min-width: 320px) and (max-width: 768px) {
+    .MaiN-Container{
+      max-width: 70%;
+    }
 
     .card-J{
         display: grid;
