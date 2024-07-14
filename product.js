@@ -72,4 +72,6 @@ $(document).ready(()=>{
                       </div>`)
           })
       }
+
+    //   localStorage.removeItem('Selected-Product')
 })

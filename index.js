@@ -289,8 +289,13 @@ $(document).ready(function() {
     localStorage.setItem('Poketo-Products', JSON.stringify(products))
     }
 
+    // get all products
+    let products = JSON.parse(localStorage.getItem('Poketo-Products'))
 // call function to load products
-    // createProducts()
+if(products === null){
+    createProducts();
+}
+    
 
 
     //slick functions
@@ -353,8 +358,7 @@ $(document).ready(function() {
         ]
     });
 
-    // get all products
-    let products = JSON.parse(localStorage.getItem('Poketo-Products'))
+    
 
     // get products for each slider
     let products1 = JSON.parse(localStorage.getItem('Poketo-Products')).splice(0, 9)
@@ -485,5 +489,7 @@ $(document).ready(function() {
                 localStorage.setItem('Selected-Product', JSON.stringify(item))
             }
         })
+
+        window.location.href = 'product.html'
     })
 });
