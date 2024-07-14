@@ -38,19 +38,11 @@ $(document).ready(function() {
         
         if (isValid) {
             // this.submit();
-            let users = JSON.parse(localStorage.getItem ("users")) || []
-            let usersItems = JSON.parse(localStorage.getItem("CurrentUser-cartItems")) || [];
-
+            let users = JSON.parse(localStorage.getItem ("Poketo-users")) || []
             users.forEach((user)=>  {
                 if (user.Email === email && user.password === password) {
                     localStorage.setItem ("CurrentUser", user.firstName)
-                    let currentUserCart = {
-                        name:  user.firstName,
-                        cartItems : []
-                      }
-
-                      usersItems.push(currentUserCart)
-                      localStorage.setItem('CurrentUser-cartItems', JSON.stringify(usersItems))
+                    
 
                     window.location.href = "index.html"
                 }

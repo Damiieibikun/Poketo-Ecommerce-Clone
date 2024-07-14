@@ -17,7 +17,8 @@
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.208); */
     margin: auto;
     width: 100%;
-    height: 500px;
+    /* height: 500px; */
+    padding-bottom: 50px;
     
 }
 
@@ -79,7 +80,7 @@
     width: 100%;
     height: 60px;
     color: white;
-    background-color: #2b6df0;
+    background-color: #0085ca;
     border-radius: 30px;
     outline: none;
     font-weight: 600;
@@ -89,6 +90,7 @@
 
 .Jbtn2:hover {
     background-color: #6392f0;
+    cursor: pointer;
 }
 
 

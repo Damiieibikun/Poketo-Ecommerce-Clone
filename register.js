@@ -57,10 +57,11 @@ $(document).ready(function() {
         // If form is valid, submit the form
         else if (isValid) {
             // this.submit();
-            alert('registration successful')
+            alert('Registration successful')
 
             // if all is valid
-            let users = JSON.parse (localStorage.getItem('users')) || []
+            let users = JSON.parse (localStorage.getItem('Poketo-users')) || []
+            let usersItems = JSON.parse(localStorage.getItem("CurrentUser-cartItems")) || [];
 
             let usersData = {
                 firstName: $("#name").val(),
@@ -70,7 +71,14 @@ $(document).ready(function() {
             }
 
             users.push (usersData)
-            localStorage.setItem ("users", JSON.stringify(users))
+            localStorage.setItem ("Poketo-users", JSON.stringify(users))
+
+            let currentUserCart = {
+                name:  usersData.firstName,
+                cartItems : []
+              }
+              usersItems.push(currentUserCart)
+              localStorage.setItem('CurrentUser-cartItems', JSON.stringify(usersItems))
 
             window.location.href = 'login.html'
         }

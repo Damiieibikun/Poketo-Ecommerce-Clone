@@ -90,6 +90,9 @@ body {
   display: none;
 }
 
+#d-hamburger-menu-icon:hover{
+  cursor: pointer;
+}
 #logo:hover, #logo-responsive:hover{
   cursor: pointer;
 }
@@ -179,6 +182,7 @@ height: 80vh;
   position: relative;
   left: 100%;
   justify-content: space-around;
+  z-index: 999;
   /* left: 0; */
 }
 
@@ -199,7 +203,9 @@ height: 80vh;
 }
 
 
-
+.bi-trash3:hover{
+  cursor: pointer;
+}
 
 
 

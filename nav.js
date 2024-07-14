@@ -1,4 +1,10 @@
 $(document).ready(() => {
+    // Current User's Cart info
+    let allproducts = JSON.parse(localStorage.getItem("Poketo-Products"));
+    let usersItems =
+      JSON.parse(localStorage.getItem("CurrentUser-cartItems")) || [];
+    let currentUser = localStorage.getItem("CurrentUser");
+  
   // fixed nav functionality
   let sticky = $("#d-fixedNav").get(0).offsetTop;
   $(window).on("scroll", function () {
@@ -57,9 +63,18 @@ $(document).ready(() => {
   $("#d-account-nav").click(function () {
     window.location.href = "login.html";
   });
-
+$('#d-account-logout, #d-login-hamburger').click(function(){
+  localStorage.removeItem('CurrentUser')
+  window.location.href = "login.html";
+})
   $(".d-AddBtn-cart").click(function () {
-    window.location.href = "login.html";
+    if(currentUser === null){
+        window.location.href = "login.html"
+    }
+    else{
+///do somethong
+    }
+   
   });
   //redirect to home
   $("#logo").click(function () {
@@ -90,16 +105,14 @@ $(document).ready(() => {
     clicked = !clicked;
   });
 
-  // Current User's Cart info
-  let allproducts = JSON.parse(localStorage.getItem("Poketo-Products"));
-  let usersItems =
-    JSON.parse(localStorage.getItem("CurrentUser-cartItems")) || [];
-  let currentUser = localStorage.getItem("CurrentUser");
 
   if (currentUser === null) {
     $("#d-checkout-btn").text("CONTINUE SHOPPING");
     $("#d-cart-contents").css("height", "47vh");
+    $('#d-account-logout').hide()
   } else {
+    $('#d-account-nav').hide()
+    $('#d-login-hamburger').text('Logout / Account')
     usersItems.forEach((user) => {
       if (currentUser === user.name) {
         // check if cart is empty
@@ -109,23 +122,28 @@ $(document).ready(() => {
         if (cartItemNumber === 0) {
           $("#d-checkout-btn").text("CONTINUE SHOPPING");
           $("#d-cart-contents").css("height", "47vh");
-        } else if (cartItemNumber === 1) {
-          $("#d-taxShiping-info").removeClass("d-display-none");
-          $("#d-empty-cart").hide();
-          $("#d-cart-contents").empty();
-          $("#d-loveProducts").hide();
-          $("#d-cart-contents").css("height", "43vh");
-        } else {
-          $("#d-taxShiping-info").removeClass("d-display-none");
-          $("#d-freeShipping").removeClass("d-display-none");
-          $("#d-empty-cart").hide();
-          $("#d-cart-contents").empty();
-          $("#d-loveProducts").hide();
+        }  else {
+          if(cartItemNumber === 1){
+             $("#d-taxShiping-info").removeClass("d-display-none");
+            $("#d-empty-cart").hide();
+            $("#d-cart-contents").empty();
+            $("#d-loveProducts").hide();
+            $("#d-cart-contents").css("height", "43vh");
+          }
+          else{
+            $("#d-taxShiping-info").removeClass("d-display-none");
+            $("#d-freeShipping").removeClass("d-display-none");
+            $("#d-empty-cart").hide();
+            $("#d-cart-contents").empty();
+            $("#d-loveProducts").hide();
+          }
+          
 
-          user.cartItems.forEach((i) => {
+          user.cartItems.forEach((i, index) => {
             let item = allproducts[i-1]
+        
             $("#d-cart-contents").append(
-              `<div class="d-grid d-cart-item-desc">
+              `<div class="d-grid d-cart-item-desc" data-id=${item.id}>
               <div class="d-flex d-gap-20">
                 <img
                   src=${item.img}
@@ -133,7 +151,7 @@ $(document).ready(() => {
                 />
                 <div class="d-flex-col" style="justify-content: space-between">
                   <p class="d-title-item">${item.productName}</p>
-                  <p class="d-price-item">$${item.price}</p>
+                  <p>$<span class="d-price-item">${item.price}</span></p>
                 </div>
               </div>
   
@@ -145,6 +163,7 @@ $(document).ready(() => {
                   fill="currentColor"
                   class="bi bi-trash3"
                   viewBox="0 0 16 16"
+                  data-id = ${index}
                 >
                   <path
                     d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"
@@ -194,6 +213,11 @@ $(document).ready(() => {
   $(".bi-plus").click(function () {
     let amount = $(this).prev().val();
     $(this).prev().val(`${++amount}`);
+    let itemId = $(this).parents('.d-cart-item-desc').data('id')
+    let price = allproducts[itemId-1].price
+    $(this).parent().parent().prev().find('.d-price-item').text(price * $(this).prev().val())
+    // console.log($(this).parent().parent().prev().find('.d-price-item').text() * $(this).prev().val())
+   
   });
 
   $(".bi-dash").click(function () {
@@ -218,5 +242,22 @@ $(document).ready(() => {
         }
       });
     }
+    location.reload(true)
   });
+
+  // delete from cart
+
+  $('.bi-trash3').click(function(){
+    let itemId = $(this).data('id')
+    usersItems.forEach((user) => {
+      if (user.name === currentUser) {
+        user.cartItems.splice(itemId, 1)
+        localStorage.setItem(
+          "CurrentUser-cartItems",
+          JSON.stringify(usersItems)
+        );
+        location.reload(true)
+      }
+    })
+  })
 });
