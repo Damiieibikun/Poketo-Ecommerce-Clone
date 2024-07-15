@@ -86,8 +86,8 @@ $(document).ready(function() {
         },
         {
             id: 5,
-            img: 'https://www.poketo.com/cdn/shop/files/PK-ConceptPLanner-SpringCollection-Blocks-Front-Product.webp?v=1708515727&width=500',
-            imgHover: 'https://www.poketo.com/cdn/shop/files/PK-ConceptPLanner-SpringCollection-Blocks-Back-Product.webp?v=1708515753&width=600',
+            img: 'https://www.poketo.com/cdn/shop/files/Pk-AccordionFiler-Large-Product-Front.webp?v=1719497013&width=356',
+            imgHover: 'https://www.poketo.com/cdn/shop/files/Pk-AccordionFiler-Large-Product-2.webp?v=1717070233&width=600',
             tag: 'Best Seller',
             tagColor: '#ffc845',
             productName: 'Accordion Pro Filer',

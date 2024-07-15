@@ -1,10 +1,10 @@
 $(document).ready(() => {
-    // Current User's Cart info
-    let allproducts = JSON.parse(localStorage.getItem("Poketo-Products"));
-    let usersItems =
-      JSON.parse(localStorage.getItem("CurrentUser-cartItems")) || [];
-    let currentUser = localStorage.getItem("CurrentUser");
-  
+  // Current User's Cart info
+  let allproducts = JSON.parse(localStorage.getItem("Poketo-Products"));
+  let usersItems =
+    JSON.parse(localStorage.getItem("CurrentUser-cartItems")) || [];
+  let currentUser = localStorage.getItem("CurrentUser");
+
   // fixed nav functionality
   let sticky = $("#d-fixedNav").get(0).offsetTop;
   $(window).on("scroll", function () {
@@ -63,19 +63,42 @@ $(document).ready(() => {
   $("#d-account-nav").click(function () {
     window.location.href = "login.html";
   });
-$('#d-account-logout, #d-login-hamburger').click(function(){
-  localStorage.removeItem('CurrentUser')
-  window.location.href = "login.html";
-})
-  $(".d-AddBtn-cart").click(function () {
-    if(currentUser === null){
-        window.location.href = "login.html"
-    }
-    else{
-///do somethong
-    }
-   
+  $("#d-account-logout, #d-login-hamburger").click(function () {
+    localStorage.removeItem("CurrentUser");
+    localStorage.removeItem('Selected-Product')
+    window.location.href = "login.html";
   });
+
+  // for empty cart 
+  // $(".d-AddBtn-cart").click(function () {
+  //   if (currentUser === null) {
+  //     window.location.href = "login.html";
+  //   } else {
+  //     ///do somethong
+  //   }
+  // });
+
+  
+  //add to cart from index and shop page
+  $(document).on('click', '.d-addCart', function(){
+    let itemSelected = $(this).parent().data('id')
+    if(currentUser !== null){
+      usersItems.forEach((user) => {
+        if (user.name === currentUser) {
+          let addedID = {
+            itemId: itemSelected,
+            quantity: 1
+          }
+          user.cartItems.push(addedID);
+          localStorage.setItem(
+            "CurrentUser-cartItems",
+            JSON.stringify(usersItems)
+          );
+        }
+      });
+    }
+    window.location.href = 'product.html'
+  })
   //redirect to home
   $("#logo").click(function () {
     window.location.href = "index.html";
@@ -105,43 +128,32 @@ $('#d-account-logout, #d-login-hamburger').click(function(){
     clicked = !clicked;
   });
 
-
   if (currentUser === null) {
     $("#d-checkout-btn").text("CONTINUE SHOPPING");
     $("#d-cart-contents").css("height", "47vh");
-    $('#d-account-logout').hide()
+    $("#d-account-logout").hide();
   } else {
-    $('#d-account-nav').hide()
-    $('#d-login-hamburger').text('Logout / Account')
+    $("#d-account-nav").hide();
+    $("#d-login-hamburger").text("Logout / Account");
     usersItems.forEach((user) => {
       if (currentUser === user.name) {
         // check if cart is empty
         let cartItemNumber = user.cartItems.length;
-       $('#d-num-items').text(`(${cartItemNumber} items)`)
-       $('#d-cart-items-num').text(`${cartItemNumber}`)
+        $("#d-num-items").text(`(${cartItemNumber} items)`);
+        $("#d-cart-items-num").text(`${cartItemNumber}`);
         if (cartItemNumber === 0) {
           $("#d-checkout-btn").text("CONTINUE SHOPPING");
           $("#d-cart-contents").css("height", "47vh");
-        }  else {
-          if(cartItemNumber === 1){
-             $("#d-taxShiping-info").removeClass("d-display-none");
-            $("#d-empty-cart").hide();
-            $("#d-cart-contents").empty();
-            $("#d-loveProducts").hide();
-            $("#d-cart-contents").css("height", "43vh");
-          }
-          else{
+        } else {        
             $("#d-taxShiping-info").removeClass("d-display-none");
             $("#d-freeShipping").removeClass("d-display-none");
             $("#d-empty-cart").hide();
             $("#d-cart-contents").empty();
             $("#d-loveProducts").hide();
-          }
-          
 
           user.cartItems.forEach((i, index) => {
-            let item = allproducts[i-1]
-        
+            let item = allproducts[i.itemId - 1];
+
             $("#d-cart-contents").append(
               `<div class="d-grid d-cart-item-desc" data-id=${item.id}>
               <div class="d-flex d-gap-20">
@@ -151,7 +163,9 @@ $('#d-account-logout, #d-login-hamburger').click(function(){
                 />
                 <div class="d-flex-col" style="justify-content: space-between">
                   <p class="d-title-item">${item.productName}</p>
-                  <p>$<span class="d-price-item">${item.price}</span></p>
+                  <p>$<span class="d-price-item">${
+                    item.price * i.quantity
+                  }</span></p>
                 </div>
               </div>
   
@@ -185,7 +199,7 @@ $('#d-account-logout, #d-login-hamburger').click(function(){
                       d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8"
                     />
                   </svg>
-                  <input type="text" name="" class="d-amt-items" value="1" />
+                  <input type="text" name="" class="d-amt-items" value=${i.quantity} />
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -209,32 +223,72 @@ $('#d-account-logout, #d-login-hamburger').click(function(){
     });
   }
 
-  // increase and decrease cart items
+  // show total price
+  var totalPrice = 0;
+  $(".d-price-item").each((index, i) => {
+    totalPrice += parseInt(i.innerText);
+  });
+
+  $("#d-price").text(`$${totalPrice}`);
+
+  // increase cart items
   $(".bi-plus").click(function () {
     let amount = $(this).prev().val();
     $(this).prev().val(`${++amount}`);
-    let itemId = $(this).parents('.d-cart-item-desc').data('id')
-    let price = allproducts[itemId-1].price
-    $(this).parent().parent().prev().find('.d-price-item').text(price * $(this).prev().val())
-    // console.log($(this).parent().parent().prev().find('.d-price-item').text() * $(this).prev().val())
-   
+    let itemId = $(this).parents(".d-cart-item-desc").data("id") || $(this).parents('.items-jenny').prev().children().data('id');
+    let price = allproducts[itemId - 1].price;
+    $(this)
+      .parent()
+      .parent()
+      .prev()
+      .find(".d-price-item")
+      .text(price * $(this).prev().val());
+
+    // update total price
+    var totalPrice = 0;
+    $(".d-price-item").each((index, i) => {
+      totalPrice += parseInt(i.innerText);
+    });
+    $("#d-price").text(`$${totalPrice}`);
   });
 
+  // decrease cart items
   $(".bi-dash").click(function () {
     let amount = $(this).next().val();
     if (amount > 1) {
       $(this).next().val(`${--amount}`);
+      let itemId = $(this).parents(".d-cart-item-desc").data("id") || $(this).parents('.items-jenny').prev().children().data('id');
+    let price = allproducts[itemId - 1].price;
+    $(this)
+      .parent()
+      .parent()
+      .prev()
+      .find(".d-price-item")
+      .text(price * $(this).next().val());
+
+    // update total price
+    var totalPrice = 0;
+    $(".d-price-item").each((index, i) => {
+      totalPrice += parseInt(i.innerText);
+    });
+    $("#d-price").text(`$${totalPrice}`);
     }
   });
 
   $("#addCart-Product").click(function () {
     let addedItemID = $(this).parent().prev().children().data("id");
+    let quantity = $(this).prev().find('.d-amt-items').val()
+    
     if (currentUser === null) {
       window.location.href = "login.html";
     } else {
       usersItems.forEach((user) => {
         if (user.name === currentUser) {
-          user.cartItems.push(addedItemID);
+          let addedID = {
+            itemId: addedItemID,
+            quantity: parseInt(quantity)
+          }
+          user.cartItems.push(addedID);
           localStorage.setItem(
             "CurrentUser-cartItems",
             JSON.stringify(usersItems)
@@ -242,22 +296,27 @@ $('#d-account-logout, #d-login-hamburger').click(function(){
         }
       });
     }
-    location.reload(true)
+    location.reload(true);
   });
 
   // delete from cart
 
-  $('.bi-trash3').click(function(){
-    let itemId = $(this).data('id')
+  $(".bi-trash3").click(function () {
+    let itemId = $(this).data("id");
     usersItems.forEach((user) => {
       if (user.name === currentUser) {
-        user.cartItems.splice(itemId, 1)
+        user.cartItems.splice(itemId, 1);
         localStorage.setItem(
           "CurrentUser-cartItems",
           JSON.stringify(usersItems)
         );
-        location.reload(true)
+        location.reload(true);
       }
-    })
-  })
+    });
+  });
+
+
+
+
+
 });

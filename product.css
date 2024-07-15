@@ -244,7 +244,7 @@ justify-content: space-between;
 }
 
 .items-img-1{
-    background-image: url(./images/tape.jpeg);
+    background-image: url('https://www.poketo.com/cdn/shop/files/YieldXHeadspace-instantsunshine-product_fff05d45-23c0-4ad2-b641-829248bd9d18.webp?v=1707228411&width=500');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -252,21 +252,21 @@ justify-content: space-between;
 }
 
 .items-img-2{
-    background-image: url(./images/tape.jpeg);
+    background-image: url('https://www.poketo.com/cdn/shop/files/HeadspaceCollabPoketoandyield1940-pdpv1copia_6772a246-58c9-4f18-902f-fc2ba7e9e561.jpg?v=1707141507&width=600');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .items-img-3{
-    background-image: url(./images/open-book1.jpeg);
+    background-image: url('https://www.poketo.com/cdn/shop/products/Everything-Desk-Pad-01.jpg?v=1651186991&width=330');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .items-img-4{
-    background-image: url(./images/multi-color.jpeg);
+    background-image: url('https://www.poketo.com/cdn/shop/products/Everyday-Desk-Pad-Stop-Motion-01.gif?v=1651186991&width=500');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -287,14 +287,14 @@ justify-content: space-between;
 }
 
 .items-img-7{
-    background-image: url(./images/open-book2.jpeg);
+    background-image: url('https://www.poketo.com/cdn/shop/files/PK-ConceptPLanner-SpringCollection-Blocks-Front-Product.webp?v=1708515727&width=500');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .items-img-8{
-    background-image: url(./images/blue-diary.jpeg);
+    background-image: url('https://www.poketo.com/cdn/shop/files/PK-ConceptPLanner-SpringCollection-Blocks-Back-Product.webp?v=1708515753&width=600');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -320,7 +320,9 @@ justify-content: space-between;
     cursor: pointer;
     font-family: 'Sofia Sans', sans-serif;
 }
-
+.items:hover .d-addCart{
+    z-index: 5;
+}
 
 
 .text-holder h2{
