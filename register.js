@@ -53,9 +53,13 @@ $(document).ready(function() {
             $("#passerror").show();
             isValid = false;
         }
+        else if (password.length < 5) { 
+            $("#passlengtherror").show();
+            IsVaild = false;
+            }
 
         // If form is valid, submit the form
-        else if (isValid) {
+        else {
             // this.submit();
             alert('Registration successful')
 
@@ -82,10 +86,7 @@ $(document).ready(function() {
 
             window.location.href = 'login.html'
         }
-        else{
-            console.log('failed')
-            isValid= false
-        }
+       
     });
 });
 

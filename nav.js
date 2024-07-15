@@ -70,13 +70,28 @@ $(document).ready(() => {
   });
 
   // for empty cart 
-  // $(".d-AddBtn-cart").click(function () {
-  //   if (currentUser === null) {
-  //     window.location.href = "login.html";
-  //   } else {
-  //     ///do somethong
-  //   }
-  // });
+  $(".d-AddBtn-cart").click(function () {
+    if (currentUser === null) {
+      window.location.href = "login.html";
+    } else {
+      let itemId = $(this).parents(".d-cart-item-desc").data("id")
+      usersItems.forEach((user) => {
+        if (user.name === currentUser) {
+          let addedID = {
+            itemId: itemId,
+            quantity: 1
+          }
+          user.cartItems.push(addedID);
+          localStorage.setItem(
+            "CurrentUser-cartItems",
+            JSON.stringify(usersItems)
+          );
+        }
+      });
+
+      location.reload(true)
+    }
+  });
 
   
   //add to cart from index and shop page
@@ -314,9 +329,5 @@ $(document).ready(() => {
       }
     });
   });
-
-
-
-
 
 });

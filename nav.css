@@ -509,7 +509,7 @@ footer ul a:hover {
   }
   #d-cart-info{
     padding: 5px;
-    height: fit-content;
+    /* height: fit-content; */
   }
 }
 @media  screen and (max-width: 768px) {
@@ -535,7 +535,7 @@ footer ul a:hover {
   }
   #d-cart-info{
     padding: 5px;
-    height: fit-content;
+    /* height: fit-content; */
   }
   .d-cart-stars-rating svg{
     display: none;

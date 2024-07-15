@@ -239,6 +239,10 @@ justify-content: space-between;
 
 }
 
+.color2:hover{
+    cursor: pointer;
+}
+
 .items:hover .color2{
     opacity: 0;
 }
@@ -259,14 +263,14 @@ justify-content: space-between;
 }
 
 .items-img-3{
-    background-image: url('https://www.poketo.com/cdn/shop/products/Everything-Desk-Pad-01.jpg?v=1651186991&width=330');
+    background-image: url('https://www.poketo.com/cdn/shop/products/Everyday-Desk-Pad-Stop-Motion-01.gif?v=1651186991&width=500');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .items-img-4{
-    background-image: url('https://www.poketo.com/cdn/shop/products/Everyday-Desk-Pad-Stop-Motion-01.gif?v=1651186991&width=500');
+    background-image: url('https://www.poketo.com/cdn/shop/products/Everything-Desk-Pad-01.jpg?v=1651186991&width=330');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
