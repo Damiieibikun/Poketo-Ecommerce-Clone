@@ -307,6 +307,7 @@ justify-content: space-between;
 .text-holder{
     position: absolute; 
     bottom: 0; 
+    width: 100%;
     
 }
 

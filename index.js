@@ -492,4 +492,5 @@ if(products === null){
 
         window.location.href = 'product.html'
     })
+
 });

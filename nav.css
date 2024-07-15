@@ -206,7 +206,9 @@ height: 80vh;
 .bi-trash3:hover{
   cursor: pointer;
 }
-
+.d-selected-color {
+  border: 1px solid #0085CA;
+}
 
 
 .d-AddBtn-cart:hover{

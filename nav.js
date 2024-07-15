@@ -59,6 +59,13 @@ $(document).ready(() => {
     $("body").css("overflow", "visible");
   });
 
+  // select colors
+  $(document).on('click', '.d-color-selection', function(){
+
+    $(this).parent().addClass('d-selected-color')
+    $(this).parent().siblings().removeClass('d-selected-color')
+})
+
   // redirect to login
   $("#d-account-nav").click(function () {
     window.location.href = "login.html";
@@ -112,7 +119,7 @@ $(document).ready(() => {
         }
       });
     }
-    window.location.href = 'product.html'
+    window.location.href = 'product.html' 
   })
   //redirect to home
   $("#logo").click(function () {
