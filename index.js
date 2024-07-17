@@ -472,7 +472,12 @@ if(products === null){
         })
         $('.slider-nav2').slick('slickAdd', productItem2)
     })
-
+    $('.d-product-colors').each((index, i)=>{
+        if($(i).children()[0]){
+            $(i).children()[0].classList.add('d-selected-color')
+        }
+          
+        })
 
     $('.d-slider-product-item').mouseover(function() {
         $(this).find('.d-addCart').show()

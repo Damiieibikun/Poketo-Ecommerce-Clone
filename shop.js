@@ -63,6 +63,14 @@ $(document).ready(() => {
         }
         $('#d-shopAll-grid-items').append(productItem)
     })
+
+    $('.d-product-colors').each((index, i)=>{
+        if($(i).children()[0]){
+            $(i).children()[0].classList.add('d-selected-color')
+        }
+          
+        })
+        
     $('.d-slider-product-item').mouseover(function() {
         $(this).find('.d-addCart').show()
     })
