@@ -13,23 +13,23 @@ body {
 
 @font-face {
   font-family: cardiz;
-  src: url(fonts/cadiz-regular.woff2);
+  src: url(../fonts/cadiz-regular.woff2);
 }
 
 @font-face {
   font-family: sofia proRegular;
-  src: url(fonts/SofiaProRegular.woff2);
+  src: url(../fonts/SofiaProRegular.woff2);
 }
 
 
 @font-face {
   font-family: sofia proBold;
-  src: url(fonts/SofiaPro-Bold.woff2);
+  src: url(../fonts/SofiaPro-Bold.woff2);
 }
 
 @font-face {
   font-family: sofia proMedium;
-  src: url(fonts/SofiaProMedium.woff2);
+  src: url(../fonts/SofiaProMedium.woff2);
 }
 /* Common styles */
 
