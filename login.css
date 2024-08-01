@@ -24,6 +24,7 @@
 
 #LoginForm {
     width: 100%;
+    position: relative;
 }
 
 .card-J h1{
@@ -107,7 +108,11 @@
     position: absolute;
     bottom: -15px;
 }
-
+#invalidcredentials{
+    top: 0;
+    text-align: center;
+    left: auto;
+}
 
 
 .input1-div{

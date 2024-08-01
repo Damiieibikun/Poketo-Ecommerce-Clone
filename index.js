@@ -1,301 +1,301 @@
 $(document).ready(function() {
-    
-    function createProducts(){
+
+    function createProducts() {
         const products = [{
-            id: 1,
-            img: 'https://www.poketo.com/cdn/shop/files/PK-Nav-Spectrum_Wall_Planner.gif?v=1679067757&width=300',
-            imgHover: 'https://www.poketo.com/cdn/shop/files/PK-PDP-SpectrumWallPlanner-Gradient.jpg?v=1708606361&width=500',
-            tag: 'Best Seller',
-            tagColor: '#ffc845',
-            productName: 'Spectrum Wall Planner',
-            stars: '4.8',
-            quantity: 53,
-            price: 48,
-            availableImage: ['https://www.poketo.com/cdn/shop/files/Screenshot_2024-02-22_at_18.05.40.png?v=1708605361',
-                'https://www.poketo.com/cdn/shop/files/Vibrant.png?v=1679422696',
-                'https://www.poketo.com/cdn/shop/files/Earthy.png?v=1679422738',
-                'https://www.poketo.com/cdn/shop/files/Grey.png?v=1679422774',
-                'https://www.poketo.com/cdn/shop/files/Screenshot_2024-01-19_at_17.55.14.png?v=1705667178'
+                id: 1,
+                img: 'https://www.poketo.com/cdn/shop/files/PK-Nav-Spectrum_Wall_Planner.gif?v=1679067757&width=300',
+                imgHover: 'https://www.poketo.com/cdn/shop/files/PK-PDP-SpectrumWallPlanner-Gradient.jpg?v=1708606361&width=500',
+                tag: 'Best Seller',
+                tagColor: '#ffc845',
+                productName: 'Spectrum Wall Planner',
+                stars: '4.8',
+                quantity: 53,
+                price: 48,
+                availableImage: ['https://www.poketo.com/cdn/shop/files/Screenshot_2024-02-22_at_18.05.40.png?v=1708605361',
+                    'https://www.poketo.com/cdn/shop/files/Vibrant.png?v=1679422696',
+                    'https://www.poketo.com/cdn/shop/files/Earthy.png?v=1679422738',
+                    'https://www.poketo.com/cdn/shop/files/Grey.png?v=1679422774',
+                    'https://www.poketo.com/cdn/shop/files/Screenshot_2024-01-19_at_17.55.14.png?v=1705667178'
 
-            ]
+                ]
 
-        },
-        {
-            id: 2,
-            img: 'https://www.poketo.com/cdn/shop/files/earthy-mini-planner.gif?v=1711386043&width=500',
-            imgHover: 'https://www.poketo.com/cdn/shop/files/PK-PDP-ATF-SpectrumMiniPlanner-earthy.webp?v=1711386098&width=500',
-            tag: 'New Color',
-            tagColor: '#ffc845',
-            productName: 'Spectrum Mini Planner',
-            stars: '3.8',
-            quantity: 5,
-            price: 24,
-            availableImage: [
-                'https://www.poketo.com/cdn/shop/files/Earthy.png?v=1679422738',
-                'https://www.poketo.com/cdn/shop/files/Screenshot_2024-01-19_at_17.55.14.png?v=1705667178',
-                'https://www.poketo.com/cdn/shop/files/Grey.png?v=1679422774',
-            ]
+            },
+            {
+                id: 2,
+                img: 'https://www.poketo.com/cdn/shop/files/earthy-mini-planner.gif?v=1711386043&width=500',
+                imgHover: 'https://www.poketo.com/cdn/shop/files/PK-PDP-ATF-SpectrumMiniPlanner-earthy.webp?v=1711386098&width=500',
+                tag: 'New Color',
+                tagColor: '#ffc845',
+                productName: 'Spectrum Mini Planner',
+                stars: '3.8',
+                quantity: 5,
+                price: 24,
+                availableImage: [
+                    'https://www.poketo.com/cdn/shop/files/Earthy.png?v=1679422738',
+                    'https://www.poketo.com/cdn/shop/files/Screenshot_2024-01-19_at_17.55.14.png?v=1705667178',
+                    'https://www.poketo.com/cdn/shop/files/Grey.png?v=1679422774',
+                ]
 
-        },
-        {
-            id: 3,
-            img: 'https://www.poketo.com/cdn/shop/files/PK-ProjectPLanner-SpringCollection-Red-Front-Product_80543c51-26df-4902-a4a9-dcc413031897.webp?v=1708514466&width=600',
-            imgHover: 'https://www.poketo.com/cdn/shop/files/PK-ProjectPLanner-SpringCollection-Red-Back-Product.webp?v=1708514422&width=600',
-            tag: 'Best Seller',
-            tagColor: '#ffc845',
-            productName: 'Project Planner',
-            stars: '4.3',
-            quantity: 13,
-            price: 38,
-            availableColors: [
-                '#DD1313',
-                '#EACA0A',
-                '#4B995C',
-                '#101010',
-                '##A38AC1',
-                '##AE7251',
-            ],
-            availableImage: [
-                'https://www.poketo.com/cdn/shop/files/Midnight.png?v=1679423522'
+            },
+            {
+                id: 3,
+                img: 'https://www.poketo.com/cdn/shop/files/PK-ProjectPLanner-SpringCollection-Red-Front-Product_80543c51-26df-4902-a4a9-dcc413031897.webp?v=1708514466&width=600',
+                imgHover: 'https://www.poketo.com/cdn/shop/files/PK-ProjectPLanner-SpringCollection-Red-Back-Product.webp?v=1708514422&width=600',
+                tag: 'Best Seller',
+                tagColor: '#ffc845',
+                productName: 'Project Planner',
+                stars: '4.3',
+                quantity: 13,
+                price: 38,
+                availableColors: [
+                    '#DD1313',
+                    '#EACA0A',
+                    '#4B995C',
+                    '#101010',
+                    '##A38AC1',
+                    '##AE7251',
+                ],
+                availableImage: [
+                    'https://www.poketo.com/cdn/shop/files/Midnight.png?v=1679423522'
 
-            ]
+                ]
 
-        },
-        {
-            id: 4,
-            img: 'https://www.poketo.com/cdn/shop/files/PK-ConceptPLanner-SpringCollection-Blocks-Front-Product.webp?v=1708515727&width=500',
-            imgHover: 'https://www.poketo.com/cdn/shop/files/PK-ConceptPLanner-SpringCollection-Blocks-Back-Product.webp?v=1708515753&width=600',
-            tag: 'Best Seller',
-            tagColor: '#ffc845',
-            productName: 'Concept Planner',
-            stars: '5.0',
-            quantity: 13,
-            price: 36,
-            availableColors: [
-                '#DD1313',
-                '#0000FF',
-                '#4B995C',
-                '##A38AC1'
+            },
+            {
+                id: 4,
+                img: 'https://www.poketo.com/cdn/shop/files/PK-ConceptPLanner-SpringCollection-Blocks-Front-Product.webp?v=1708515727&width=500',
+                imgHover: 'https://www.poketo.com/cdn/shop/files/PK-ConceptPLanner-SpringCollection-Blocks-Back-Product.webp?v=1708515753&width=600',
+                tag: 'Best Seller',
+                tagColor: '#ffc845',
+                productName: 'Concept Planner',
+                stars: '5.0',
+                quantity: 13,
+                price: 36,
+                availableColors: [
+                    '#DD1313',
+                    '#0000FF',
+                    '#4B995C',
+                    '##A38AC1'
 
-            ],
-            availableImage: [
-                'https://www.poketo.com/cdn/shop/files/Screenshot_2024-02-21_at_17.13.27.png?v=1708515814',
-                'https://www.poketo.com/cdn/shop/files/Midnight.png?v=1679423522'
-            ]
+                ],
+                availableImage: [
+                    'https://www.poketo.com/cdn/shop/files/Screenshot_2024-02-21_at_17.13.27.png?v=1708515814',
+                    'https://www.poketo.com/cdn/shop/files/Midnight.png?v=1679423522'
+                ]
 
-        },
-        {
-            id: 5,
-            img: 'https://www.poketo.com/cdn/shop/files/Pk-AccordionFiler-Large-Product-Front.webp?v=1719497013&width=356',
-            imgHover: 'https://www.poketo.com/cdn/shop/files/Pk-AccordionFiler-Large-Product-2.webp?v=1717070233&width=600',
-            tag: 'Best Seller',
-            tagColor: '#ffc845',
-            productName: 'Accordion Pro Filer',
-            stars: '5.0',
-            quantity: 2,
-            price: 38,
-            availableColors: [
-                '#101010'
-            ],
-            availableImage: [
-                'https://www.poketo.com/cdn/shop/files/Screenshot_2024-06-12_at_19.22.39.png?v=1718200383'
-            ],
-            size: ['Large', 'Small']
+            },
+            {
+                id: 5,
+                img: 'https://www.poketo.com/cdn/shop/files/Pk-AccordionFiler-Large-Product-Front.webp?v=1719497013&width=356',
+                imgHover: 'https://www.poketo.com/cdn/shop/files/Pk-AccordionFiler-Large-Product-2.webp?v=1717070233&width=600',
+                tag: 'Best Seller',
+                tagColor: '#ffc845',
+                productName: 'Accordion Pro Filer',
+                stars: '5.0',
+                quantity: 2,
+                price: 38,
+                availableColors: [
+                    '#101010'
+                ],
+                availableImage: [
+                    'https://www.poketo.com/cdn/shop/files/Screenshot_2024-06-12_at_19.22.39.png?v=1718200383'
+                ],
+                size: ['Large', 'Small']
 
-        },
+            },
 
-        {
-            id: 6,
-            img: 'https://www.poketo.com/cdn/shop/products/Everything-Desk-Pad-01.jpg?v=1651186991&width=330',
-            imgHover: 'https://www.poketo.com/cdn/shop/products/Everyday-Desk-Pad-Stop-Motion-01.gif?v=1651186991&width=500',
-            tag: 'Best Seller',
-            tagColor: '#ffc845',
-            productName: 'Everything Desk Pad',
-            stars: '5.0',
-            quantity: 8,
-            price: 18
-
-
-        },
-        {
-            id: 7,
-            img: 'https://www.poketo.com/cdn/shop/products/PK-D-PDP-Wallet-Dome-Navy-ATF-01-2x_14117993-bc68-43fc-9469-1e38db9cbd75.jpg?v=1666990517&width=424',
-            imgHover: 'https://www.poketo.com/cdn/shop/products/Dome-Wallet-Navy-Open.jpg?v=1583867392&width=424',
-            tag: 'Best Seller',
-            tagColor: '#ffc845',
-            productName: 'Dome Wallets',
-            stars: '3.9',
-            quantity: 10,
-            price: 38,
-            availableColors: [
-                '#0000FF',
-                '#1ABE40',
-                '#A9D69E',
-                '#F2A8C4',
-                '#DD1313',
-                '#EACA0A',
-                '#101010'
-            ]
+            {
+                id: 6,
+                img: 'https://www.poketo.com/cdn/shop/products/Everything-Desk-Pad-01.jpg?v=1651186991&width=330',
+                imgHover: 'https://www.poketo.com/cdn/shop/products/Everyday-Desk-Pad-Stop-Motion-01.gif?v=1651186991&width=500',
+                tag: 'Best Seller',
+                tagColor: '#ffc845',
+                productName: 'Everything Desk Pad',
+                stars: '5.0',
+                quantity: 8,
+                price: 18
 
 
-        },
-        {
-            id: 8,
-            img: 'https://www.poketo.com/cdn/shop/files/PK-doublewall-groovycup-product-teal.webp?v=1710509984&width=500',
-            imgHover: 'https://www.poketo.com/cdn/shop/files/PK-Lookbook-FW23-Glassware-GroovyCup-Teal-hand_copy.webp?v=1710510010&width=220',
-            tag: 'New Color',
-            tagColor: '#ffc845',
-            productName: 'Double Wall Groovy Glass',
-            stars: '4.9',
-            quantity: 7,
-            price: 28,
-            availableColors: [
-                '#38B5C6',
-                '#0000FF',
-                '#4B995C',
-                '#F2A8C4'
-            ]
+            },
+            {
+                id: 7,
+                img: 'https://www.poketo.com/cdn/shop/products/PK-D-PDP-Wallet-Dome-Navy-ATF-01-2x_14117993-bc68-43fc-9469-1e38db9cbd75.jpg?v=1666990517&width=424',
+                imgHover: 'https://www.poketo.com/cdn/shop/products/Dome-Wallet-Navy-Open.jpg?v=1583867392&width=424',
+                tag: 'Best Seller',
+                tagColor: '#ffc845',
+                productName: 'Dome Wallets',
+                stars: '3.9',
+                quantity: 10,
+                price: 38,
+                availableColors: [
+                    '#0000FF',
+                    '#1ABE40',
+                    '#A9D69E',
+                    '#F2A8C4',
+                    '#DD1313',
+                    '#EACA0A',
+                    '#101010'
+                ]
 
-        },
-        {
-            id: 9,
-            img: 'https://www.poketo.com/cdn/shop/files/PK-doublewall-mug-product-teal.webp?v=1710510149&width=500',
-            imgHover: 'https://www.poketo.com/cdn/shop/files/PK-Lookbook-FW23-Glassware-DoubleWallMug-Teal_TEA_copy.webp?v=1710510171&width=500',
-            tag: 'New Color',
-            tagColor: '#ffc845',
-            productName: 'Double Wall Mug',
-            stars: '5.0',
-            quantity: 3,
-            price: 28,
-            availableColors: [
-                '#38B5C6',
-                '#0000FF',
-                '#4B995C',
-                '#F2A8C4'
-            ]
 
-        },
-        {
-            id: 10,
-            img: 'https://www.poketo.com/cdn/shop/files/1-PK-Headspace-MindfulnessCards.jpg?v=1706712273&width=356',
-            imgHover: 'https://www.poketo.com/cdn/shop/files/PK-Headspace-MindfulnessCards-1.jpg?v=1707153855&width=310',
-            tag: 'Best Seller',
-            tagColor: '#ffc845',
-            productName: 'Headspace x Poketo Mindfulness Cards',
-            stars: '5.0',
-            quantity: 1,
-            price: 8
+            },
+            {
+                id: 8,
+                img: 'https://www.poketo.com/cdn/shop/files/PK-doublewall-groovycup-product-teal.webp?v=1710509984&width=500',
+                imgHover: 'https://www.poketo.com/cdn/shop/files/PK-Lookbook-FW23-Glassware-GroovyCup-Teal-hand_copy.webp?v=1710510010&width=220',
+                tag: 'New Color',
+                tagColor: '#ffc845',
+                productName: 'Double Wall Groovy Glass',
+                stars: '4.9',
+                quantity: 7,
+                price: 28,
+                availableColors: [
+                    '#38B5C6',
+                    '#0000FF',
+                    '#4B995C',
+                    '#F2A8C4'
+                ]
 
-        },
-        {
-            id: 11,
-            img: 'https://www.poketo.com/cdn/shop/files/YieldXHeadspace-instantsunshine-product_fff05d45-23c0-4ad2-b641-829248bd9d18.webp?v=1707228411&width=500',
-            imgHover: 'https://www.poketo.com/cdn/shop/files/HeadspaceCollabPoketoandyield1940-pdpv1copia_6772a246-58c9-4f18-902f-fc2ba7e9e561.jpg?v=1707141507&width=600',
-            tag: 'New!',
-            tagColor: '#73ccf3',
-            productName: 'Headspace x YIELD Instant Sunshine Candle',
-            stars: '4.0',
-            quantity: 1,
-            price: 32
+            },
+            {
+                id: 9,
+                img: 'https://www.poketo.com/cdn/shop/files/PK-doublewall-mug-product-teal.webp?v=1710510149&width=500',
+                imgHover: 'https://www.poketo.com/cdn/shop/files/PK-Lookbook-FW23-Glassware-DoubleWallMug-Teal_TEA_copy.webp?v=1710510171&width=500',
+                tag: 'New Color',
+                tagColor: '#ffc845',
+                productName: 'Double Wall Mug',
+                stars: '5.0',
+                quantity: 3,
+                price: 28,
+                availableColors: [
+                    '#38B5C6',
+                    '#0000FF',
+                    '#4B995C',
+                    '#F2A8C4'
+                ]
 
-        },
-        {
-            id: 12,
-            img: 'https://www.poketo.com/cdn/shop/files/YieldXHeadspace-miniretreat-product.webp?v=1706538267&width=500',
-            imgHover: 'https://www.poketo.com/cdn/shop/files/HeadspaceCollabPoketoandyield1940-pdpv1copia_6772a246-58c9-4f18-902f-fc2ba7e9e561.jpg?v=1707141507&width=600',
-            tag: 'New!',
-            tagColor: '#73ccf3',
-            productName: 'Headspace x YIELD Mini Retreat Candle',
-            stars: null,
-            quantity: null,
-            price: 32
+            },
+            {
+                id: 10,
+                img: 'https://www.poketo.com/cdn/shop/files/1-PK-Headspace-MindfulnessCards.jpg?v=1706712273&width=356',
+                imgHover: 'https://www.poketo.com/cdn/shop/files/PK-Headspace-MindfulnessCards-1.jpg?v=1707153855&width=310',
+                tag: 'Best Seller',
+                tagColor: '#ffc845',
+                productName: 'Headspace x Poketo Mindfulness Cards',
+                stars: '5.0',
+                quantity: 1,
+                price: 8
 
-        },
-        {
-            id: 13,
-            img: 'https://www.poketo.com/cdn/shop/files/YieldXHeadspace-unwindmind-product.webp?v=1706538292&width=500',
-            imgHover: 'https://www.poketo.com/cdn/shop/files/HeadspaceCollabPoketoandyield1940-pdpv1copia_6772a246-58c9-4f18-902f-fc2ba7e9e561.jpg?v=1707141507&width=600',
-            tag: 'New!',
-            tagColor: '#73ccf3',
-            productName: 'Headspace x YIELD Unwind Your Mind Candle',
-            stars: null,
-            quantity: null,
-            price: 32
+            },
+            {
+                id: 11,
+                img: 'https://www.poketo.com/cdn/shop/files/YieldXHeadspace-instantsunshine-product_fff05d45-23c0-4ad2-b641-829248bd9d18.webp?v=1707228411&width=500',
+                imgHover: 'https://www.poketo.com/cdn/shop/files/HeadspaceCollabPoketoandyield1940-pdpv1copia_6772a246-58c9-4f18-902f-fc2ba7e9e561.jpg?v=1707141507&width=600',
+                tag: 'New!',
+                tagColor: '#73ccf3',
+                productName: 'Headspace x YIELD Instant Sunshine Candle',
+                stars: '4.0',
+                quantity: 1,
+                price: 32
 
-        },
-        {
-            id: 14,
-            img: 'https://www.poketo.com/cdn/shop/files/YieldXHeadspaceproduct0595copia.webp?v=1707228412&width=500',
-            imgHover: 'https://www.poketo.com/cdn/shop/files/YieldXHeadspace-instantsunshine-product_fff05d45-23c0-4ad2-b641-829248bd9d18.webp?v=1707228411&width=500',
-            tag: 'New!',
-            tagColor: '#73ccf3',
-            productName: 'Headspace x YIELD Candle Trio',
-            stars: null,
-            quantity: null,
-            price: 32
+            },
+            {
+                id: 12,
+                img: 'https://www.poketo.com/cdn/shop/files/YieldXHeadspace-miniretreat-product.webp?v=1706538267&width=500',
+                imgHover: 'https://www.poketo.com/cdn/shop/files/HeadspaceCollabPoketoandyield1940-pdpv1copia_6772a246-58c9-4f18-902f-fc2ba7e9e561.jpg?v=1707141507&width=600',
+                tag: 'New!',
+                tagColor: '#73ccf3',
+                productName: 'Headspace x YIELD Mini Retreat Candle',
+                stars: null,
+                quantity: null,
+                price: 32
 
-        },
-        {
-            id: 15,
-            img: 'https://www.poketo.com/cdn/shop/files/PK-EverydayMindfulnessCalendar-Product-1.webp?v=1697459428&width=500',
-            imgHover: 'https://www.poketo.com/cdn/shop/files/PK-EverydayMindfulnessCalendar-Product-2.webp?v=1697459429&width=424',
-            tag: '',
-            tagColor: 'transparent',
-            productName: 'Headspace x Poketo Calendar',
-            stars: '2.0',
-            quantity: 1,
-            price: 24
+            },
+            {
+                id: 13,
+                img: 'https://www.poketo.com/cdn/shop/files/YieldXHeadspace-unwindmind-product.webp?v=1706538292&width=500',
+                imgHover: 'https://www.poketo.com/cdn/shop/files/HeadspaceCollabPoketoandyield1940-pdpv1copia_6772a246-58c9-4f18-902f-fc2ba7e9e561.jpg?v=1707141507&width=600',
+                tag: 'New!',
+                tagColor: '#73ccf3',
+                productName: 'Headspace x YIELD Unwind Your Mind Candle',
+                stars: null,
+                quantity: null,
+                price: 32
 
-        },
-        {
-            id: 16,
-            img: 'https://www.poketo.com/cdn/shop/files/PK-FeelItAllGelPens-Product-1.webp?v=1697459494&width=500',
-            imgHover: 'https://www.poketo.com/cdn/shop/files/PK-FeelItAllGelPens-Product-2.webp?v=1697459494&width=500',
-            tag: '',
-            tagColor: 'transparent',
-            productName: 'Headspace x Poketo Pens',
-            stars: '5.0',
-            quantity: 2,
-            price: 14
+            },
+            {
+                id: 14,
+                img: 'https://www.poketo.com/cdn/shop/files/YieldXHeadspaceproduct0595copia.webp?v=1707228412&width=500',
+                imgHover: 'https://www.poketo.com/cdn/shop/files/YieldXHeadspace-instantsunshine-product_fff05d45-23c0-4ad2-b641-829248bd9d18.webp?v=1707228411&width=500',
+                tag: 'New!',
+                tagColor: '#73ccf3',
+                productName: 'Headspace x YIELD Candle Trio',
+                stars: null,
+                quantity: null,
+                price: 32
 
-        },
-        {
-            id: 17,
-            img: 'https://www.poketo.com/cdn/shop/files/PK-loveYourMindJournal-Product-1.webp?v=1697459559&width=500',
-            imgHover: 'https://www.poketo.com/cdn/shop/files/PK-loveYourMindJournal-Product-2.webp?v=1697459558&width=424',
-            tag: 'Best Seller',
-            tagColor: '#ffc845',
-            productName: 'Headspace x Poketo Journal',
-            stars: '4.8',
-            quantity: 4,
-            price: 28
+            },
+            {
+                id: 15,
+                img: 'https://www.poketo.com/cdn/shop/files/PK-EverydayMindfulnessCalendar-Product-1.webp?v=1697459428&width=500',
+                imgHover: 'https://www.poketo.com/cdn/shop/files/PK-EverydayMindfulnessCalendar-Product-2.webp?v=1697459429&width=424',
+                tag: '',
+                tagColor: 'transparent',
+                productName: 'Headspace x Poketo Calendar',
+                stars: '2.0',
+                quantity: 1,
+                price: 24
 
-        },
-        {
-            id: 18,
-            img: 'https://www.poketo.com/cdn/shop/files/PK-MentalNotes-Product-1.webp?v=1697459632&width=500',
-            imgHover: 'https://www.poketo.com/cdn/shop/files/PK-MentalNotes-Product-2.webp?v=1697459633&width=500',
-            tag: '',
-            tagColor: 'transparent',
-            productName: 'Headspace x Poketo Sticky Notes',
-            stars: '5.0',
-            quantity: 1,
-            price: 8
+            },
+            {
+                id: 16,
+                img: 'https://www.poketo.com/cdn/shop/files/PK-FeelItAllGelPens-Product-1.webp?v=1697459494&width=500',
+                imgHover: 'https://www.poketo.com/cdn/shop/files/PK-FeelItAllGelPens-Product-2.webp?v=1697459494&width=500',
+                tag: '',
+                tagColor: 'transparent',
+                productName: 'Headspace x Poketo Pens',
+                stars: '5.0',
+                quantity: 2,
+                price: 14
 
-        },
-    ]
+            },
+            {
+                id: 17,
+                img: 'https://www.poketo.com/cdn/shop/files/PK-loveYourMindJournal-Product-1.webp?v=1697459559&width=500',
+                imgHover: 'https://www.poketo.com/cdn/shop/files/PK-loveYourMindJournal-Product-2.webp?v=1697459558&width=424',
+                tag: 'Best Seller',
+                tagColor: '#ffc845',
+                productName: 'Headspace x Poketo Journal',
+                stars: '4.8',
+                quantity: 4,
+                price: 28
 
-    // set products in local storage
-    localStorage.setItem('Poketo-Products', JSON.stringify(products))
+            },
+            {
+                id: 18,
+                img: 'https://www.poketo.com/cdn/shop/files/PK-MentalNotes-Product-1.webp?v=1697459632&width=500',
+                imgHover: 'https://www.poketo.com/cdn/shop/files/PK-MentalNotes-Product-2.webp?v=1697459633&width=500',
+                tag: '',
+                tagColor: 'transparent',
+                productName: 'Headspace x Poketo Sticky Notes',
+                stars: '5.0',
+                quantity: 1,
+                price: 8
+
+            },
+        ]
+
+        // set products in local storage
+        localStorage.setItem('Poketo-Products', JSON.stringify(products))
     }
 
     // get all products
     let products = JSON.parse(localStorage.getItem('Poketo-Products'))
-// call function to load products
-if(products === null){
-    createProducts();
-}
-    
+        // call function to load products
+    if (products === null) {
+        createProducts();
+    }
+
 
 
     //slick functions
@@ -326,7 +326,9 @@ if(products === null){
                     slidesToScroll: 1
                 }
             }
-        ]
+        ],
+        prevArrow: '.d-prev-arrow',
+        nextArrow: '.d-next-arrow'
     });
     $('.slider-nav2').slick({
         infinite: true,
@@ -355,10 +357,12 @@ if(products === null){
                     slidesToScroll: 1
                 }
             }
-        ]
+        ],
+        prevArrow: '.d-prev-arrow',
+        nextArrow: '.d-next-arrow'
     });
 
-    
+
 
     // get products for each slider
     let products1 = JSON.parse(localStorage.getItem('Poketo-Products')).splice(0, 9)
@@ -472,12 +476,11 @@ if(products === null){
         })
         $('.slider-nav2').slick('slickAdd', productItem2)
     })
-    $('.d-product-colors').each((index, i)=>{
-        if($(i).children()[0]){
+    $('.d-product-colors').each((index, i) => {
+        if ($(i).children()[0]) {
             $(i).children()[0].classList.add('d-selected-color')
-        }
-          
-        })
+        }  
+    })
 
     $('.d-slider-product-item').mouseover(function() {
         $(this).find('.d-addCart').show()
@@ -487,15 +490,5 @@ if(products === null){
         $(this).find('.d-addCart').hide()
     })
 
-    $('.d-slider-product-item').click(function() {
-        let selectedId = $(this).data('id');
-        products.forEach((item) => {
-            if (selectedId === item.id) {
-                localStorage.setItem('Selected-Product', JSON.stringify(item))
-            }
-        })
-
-        window.location.href = 'product.html'
-    })
 
 });

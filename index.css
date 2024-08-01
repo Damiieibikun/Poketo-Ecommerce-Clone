@@ -1,8 +1,23 @@
+@font-face {
+    font-family: cardiz;
+    src: url(fonts/cadiz-regular.woff2);
+}
+
+@font-face {
+    font-family: sofia proBold;
+    src: url(fonts/SofiaPro-Bold.woff2);
+}
+
+@font-face {
+    font-family: sofia proMedium;
+    src: url(fonts/SofiaProMedium.woff2);
+}
+
 #d-hero-slider {
     grid-template-columns: repeat(2, 1fr);
     height: 100vh;
     background-color: #EF4043;
-    color: white
+    color: white;
 }
 
 .d-hero-items {
@@ -14,6 +29,14 @@
     margin: auto;
 }
 
+#d-hero-items-txt h2 {
+    font-family: sofia proBold;
+}
+
+#d-hero-items-txt p {
+    font-family: sofia proRegular;
+}
+
 #d-hero-items-txt button,
 .d-hero2-grid button,
 .d-hero3-grid button,
@@ -21,13 +44,22 @@
 .d-hero5-grid button {
     font-size: 16px;
     border: none;
-    padding: 16px 33px;
-    border-radius: 30px;
-    width: 50%;
+    padding: 16px 20px;
+    border-radius: 49px;
+    /* width: 40%; */
+    min-width: 180px;
+    font-family: sofia proRegular;
+    background-color: #0085CA;
+    color: white;
+    -webkit-border-radius: 49px;
+    -moz-border-radius: 49px;
+    -ms-border-radius: 49px;
+    -o-border-radius: 49px;
 }
 
-.d-hero4-grid button {
-    width: 70%;
+#d-hero-items-txt button {
+    background-color: white;
+    color: black;
 }
 
 #d-hero-items-txt button:hover {
@@ -60,6 +92,13 @@
     font-size: 30px;
 }
 
+#d-marquee2 h1 {
+    font-family: sofia proBold;
+    font-size: 46px;
+    margin: 0;
+    padding: 25px 0;
+}
+
 #d-marquee img {
     margin-left: 20px;
 }
@@ -82,8 +121,18 @@
 }
 
 .d-hero2-5-txt {
-    width: 80%;
+    /* width: 80%; */
     margin: auto;
+}
+
+.d-hero2-5-txt h1 {
+    /* width: 80%; */
+    margin: 0;
+    font-family: sofia proBold;
+}
+
+.d-hero2-5-txt p {
+    font-family: sofia proRegular;
 }
 
 .d-hero2-grid,
@@ -97,6 +146,16 @@
     padding: 50px 0;
 }
 
+.d-hero2-grid {
+    gap: 50px;
+    width: 92%;
+}
+
+.d-hero5-grid {
+    padding: 0;
+    gap: 50px;
+}
+
 .d-hero2-grid h1,
 .d-hero3-grid h1,
 .d-hero4-grid h1,
@@ -104,11 +163,27 @@
     font-size: 38px;
 }
 
-.d-hero2-grid button,
-.d-hero3-grid button,
-.d-hero4-grid button {
-    background-color: #0085CA;
-    color: white;
+.d-hero4-grid h1 {
+    font-size: 46px;
+    /* font-weight: 800; */
+}
+
+.d-hero5-grid h1 {
+    font-size: 46px;
+    line-height: 46px;
+}
+
+.d-hero5-grid p {
+    width: 102%;
+}
+
+#d-new-pres {
+    margin-left: 100px;
+}
+
+#d-pattern-family {
+    padding: 0 0 0 40px;
+    margin-left: 35px;
 }
 
 .d-hero5-grid button {
@@ -139,6 +214,10 @@
 }
 
 #d-hero2-img {
+    height: 500px;
+}
+
+#d-hero2-img {
     background-image: url('https://www.poketo.com/cdn/shop/files/pk_5050_6_4.webp?v=1717159237&width=1500');
     border-radius: 17px;
 }
@@ -154,8 +233,10 @@
 #d-hero5-img {
     background-image: url('https://www.poketo.com/cdn/shop/files/XPB-M-Home-5050-Media-PatternFamily-01-2x.jpg?v=1679056208&width=1070');
     background-size: contain;
-    height: 450px;
+    height: 400px;
 }
+
+
 /*slider slick */
 
 .d-slick-slider {
@@ -172,6 +253,32 @@
     width: 50px;
     height: 50px;
 }
+.d-prev-arrow, 
+.d-next-arrow, 
+.d-prev-arrow2, 
+.d-next-arrow2{
+    background-color: #0085CA;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    color: white;
+    position: absolute;
+}
+
+.d-prev-arrow:hover, 
+.d-next-arrow:hover,
+.d-prev-arrow2:hover, 
+.d-next-arrow2:hover{
+    cursor: pointer;
+}
+
+.d-next-arrow,.d-next-arrow2 {
+    right: 40px;
+}
+
+.d-prev-arrow, .d-prev-arrow2{
+    right: 100px;
+}
 
 .slick-prev {
     left: 91%;
@@ -181,7 +288,6 @@
 .slick-prev:hover {
     background-color: #0085CA !important;
 }
-
 
 .slick-prev:focus,
 .slick-next:focus,
@@ -210,7 +316,6 @@
     transform: rotate(-135deg);
     margin-right: 10px;
 }
-
 
 .d-slick-items {
     grid-template-rows: 2fr 1fr;
@@ -252,17 +357,20 @@
 }
 
 .d-product-colors {
-    margin-top: 30px;
+    margin-bottom: 10px;
 }
 
 .d-slider-product-item {
     position: relative;
-    margin-right: 40px;
+    /* margin-right: 40px; */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 400px;
     transition: .3s ease-in-out;
+    justify-content: center;
+    width: 95%;
+    margin: auto;
 }
 
 .d-slider-product-item:hover {
@@ -281,7 +389,8 @@
     border: none;
     padding: 20px 0;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 16px;
+    font-family: sofia proRegular;
 }
 
 .d-addCart:hover {
@@ -291,20 +400,30 @@
 .d-item-tag {
     position: absolute;
     top: 10px;
-    font-family: "Montserrat", sans-serif;
+    font-family: sofia proRegular;
     font-optical-sizing: auto;
     font-style: normal;
     font-weight: 500;
-    font-size: 13px;
+    font-size: 12px;
     border-radius: 20px;
-    padding: 5px;
+    padding: 4px 8px;
     left: 20px;
     letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.d-fixed-nav {
+    border-bottom: 1px solid #0085CA;
 }
 
 #d-first-slider,
 #d-second-slider {
     margin-top: 70px;
+    position: relative;
+}
+
+#d-second-slider {
+    margin-bottom: 70px;
 }
 
 #d-first-slider h1,
@@ -313,20 +432,26 @@
     width: 95%;
     margin: auto;
     padding-bottom: 30px;
+    font-family: sofia proBold;
 }
 
 .d-product-title-slider {
     font-size: 20px;
     font-weight: 500;
+    font-family: sofia proMedium;
 }
 
 .d-slider-product-rating,
-.d-slider-product-price {
-    font-family: "Montserrat", sans-serif;
+.d-slider-product-price, .d-discountedPriceValue {
+    font-family: sofia proRegular;
     font-optical-sizing: auto;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
+}
+
+.d-quantity-avail {
+    color: rgba(0, 0, 0, 0.76);
 }
 
 #d-insta-vids {
@@ -336,14 +461,16 @@
 
 #d-insta-vids h1 {
     font-size: 62px;
-    font-weight: 600;
+    /* font-weight: 600; */
     margin: 0;
+    font-family: sofia proBold;
 }
 
 #d-insta-vids a {
-    color: #0085CA;
+    color: rgb(0, 133, 202);
     font-size: 28px;
-    font-weight: 600;
+    /* font-weight: 600; */
+    font-family: sofia proBold;
 }
 
 #d-insta-vids-grid {
@@ -361,9 +488,11 @@
 #d-insta-vids-grid video,
 #d-insta-vids-grid img {
     width: 100%;
-    height: 100%;
+    height: 242px;
     object-fit: cover;
 }
+
+
 /* media queries */
 
 @media screen and (max-width: 1024px) {
@@ -401,6 +530,14 @@
     .d-hero5-grid {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
+    }
+    #d-new-pres {
+        margin-left: 0;
+        ;
+    }
+    #d-pattern-family {
+        margin-left: 25px;
+        padding: 0;
     }
 }
 

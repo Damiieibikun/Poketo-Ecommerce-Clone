@@ -64,13 +64,12 @@ $(document).ready(() => {
         $('#d-shopAll-grid-items').append(productItem)
     })
 
-    $('.d-product-colors').each((index, i)=>{
-        if($(i).children()[0]){
+    $('.d-product-colors').each((index, i) => {
+        if ($(i).children()[0]) {
             $(i).children()[0].classList.add('d-selected-color')
-        }
-          
-        })
-        
+        }  
+    })
+
     $('.d-slider-product-item').mouseover(function() {
         $(this).find('.d-addCart').show()
     })
@@ -79,14 +78,5 @@ $(document).ready(() => {
         $(this).find('.d-addCart').hide()
     })
 
-    $('.d-slider-product-item').click(function() {
-        let selectedId = $(this).data('id');
-        products.forEach((item) => {
-            if (selectedId === item.id) {
-                localStorage.setItem('Selected-Product', JSON.stringify(item))
-            }
-        })
 
-        window.location.href = 'product.html'
-    })
 })

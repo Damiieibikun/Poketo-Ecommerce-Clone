@@ -892,7 +892,11 @@
   <div class="MaiN-Container" >
      <div class="card-J">
         <form id="LoginForm">
-           <h1>Login</h1>
+          <div style="position: relative;" class="d-flex-col d-justify-center">
+            <h1>Login</h1>
+            <p class="error-message" id="invalidcredentials">Invalid email or password address</p>
+          </div>
+          
            <div class="input1-div">
                <input class="inputs" id="email" placeholder="Email">
                   <p class="error-message" id="Eerror">Email can't be blank</p>

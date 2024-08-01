@@ -11,7 +11,6 @@ $(document).ready(function() {
     $("#LoginForm").on("submit", function(event) {
         event.preventDefault();
         $(".error-message").hide();
-
         
         var email = $("#email").val().trim();
         var password = $("#pass").val().trim();
@@ -42,9 +41,11 @@ $(document).ready(function() {
             users.forEach((user)=>  {
                 if (user.Email === email && user.password === password) {
                     localStorage.setItem ("CurrentUser", user.firstName)
-                    
-
                     window.location.href = "index.html"
+                }
+
+                else{
+                    $('#invalidcredentials').show()
                 }
             })
 

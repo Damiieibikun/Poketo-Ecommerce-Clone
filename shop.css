@@ -1,91 +1,118 @@
-            #d-shopAll-hero {
-                background-color: #F6EDE6;
-            }
-            
-            .d-shopAll-hero-txt {
-                width: 80%;
-                margin: auto;
-            }
-            
-            .d-shopAll-hero-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .d-shopAll-hero-grid h1 {
-                font-size: 38px;
-            }
-            
-            #d-shopAll-hero-img {
-                height: 420px;
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-image: url('https://www.poketo.com/cdn/shop/files/poketo_stationery_lifestyle0769_copia.jpg?v=1708603444&width=750');
-            }
-            
-            #d-shopAll-grid {
-                width: 90%;
-                margin: auto;
-                padding: 30px 0;
-            }
-            
-            #d-shopAll-filter {
-                font-size: 14px;
-                font-weight: 500;
-                padding: 20px 0;
-            }
-            
-            #d-featured {
-                border: 1px solid #0085CA;
-                border-radius: 30px;
-                width: 45%;
-                padding: 10px 0 10px 10px;
-            }
-            
-            #d-shopAll-filter-mini {
-                display: none;
-            }
-            
-            #d-shopAll-grid-items {
-                grid-template-columns: repeat(4, 1fr);
-            }
-            
-            .d-slider-product-item {
-                margin-right: 0;
-            }
-            /* Media queries */
-            
-            @media screen and (max-width: 1024px) and (min-width: 786px) {
-                #d-shopAll-grid-items {
-                    grid-template-columns: 1fr 1fr;
-                }
-                .d-slider-product-item {
-                    width: 300px;
-                    justify-self: center;
-                }
-                #d-shopAll-filter {
-                    display: none;
-                }
-                #d-shopAll-filter-mini {
-                    display: flex;
-                }
-            }
-            
-            @media screen and (max-width: 786px) {
-                .d-shopAll-hero-grid {
-                    grid-template-columns: 1fr;
-                }
-                #d-shopAll-filter {
-                    display: none;
-                }
-                #d-shopAll-filter-mini {
-                    display: flex;
-                }
-                #d-shopAll-grid-items {
-                    grid-template-columns: 1fr;
-                }
-                .d-slider-product-item {
-                    width: 300px;
-                    justify-self: center;
-                }
-            }
+@font-face {
+    font-family: sofia proBold;
+    src: url(fonts/SofiaPro-Bold.woff2);
+  }
+
+  @font-face {
+    font-family: sofia proMedium;
+    src: url(fonts/SofiaProMedium.woff2);
+  }
+
+#d-shopAll-hero {
+  background-color: #f6ede6;
+}
+
+.d-shopAll-hero-txt {
+  width: 85%;
+  margin: auto;
+}
+
+.d-shopAll-hero-txt p {
+  font-family: sofia proRegular;
+  /* width: 103%; */
+  font-size: 16px;
+}
+
+.d-shopAll-hero-grid {
+    grid-template-columns: 1.01fr 0.9fr;
+    gap: 45px;
+}
+
+.d-shopAll-hero-grid h1 {
+  font-size: 46px;
+ font-family: sofia proBold;
+  margin: 0;
+}
+
+#d-shopAll-hero-img {
+  height: 337px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("https://www.poketo.com/cdn/shop/files/poketo_stationery_lifestyle0769_copia.jpg?v=1708603444&width=750");
+}
+
+#d-shopAll-grid {
+  width: 90%;
+  margin: auto;
+  padding: 30px 0;
+}
+
+#d-shopAll-filter {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 20px 0;
+}
+
+#d-featured {
+  border: 1px solid #0085ca;
+  border-radius: 49px;
+  width: 50%;
+  padding: 10px 15px;
+  height: 25px;
+  -webkit-border-radius: 49px;
+  -moz-border-radius: 49px;
+  -ms-border-radius: 49px;
+  -o-border-radius: 49px;
+}
+
+#d-shopAll-filter-mini {
+  display: none;
+}
+
+#d-shopAll-grid-items {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.d-slider-product-item {
+  margin-right: 0;
+  justify-content: center;
+}
+/* Media queries */
+
+@media screen and (max-width: 1024px) and (min-width: 786px) {
+  #d-shopAll-grid-items {
+    grid-template-columns: 1fr 1fr;
+  }
+  .d-slider-product-item {
+    width: 300px;
+    justify-self: center;
+    margin: auto;
+  }
+  #d-shopAll-filter {
+    display: none;
+  }
+  #d-shopAll-filter-mini {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 786px) {
+  .d-shopAll-hero-grid {
+    grid-template-columns: 1fr;
+  }
+  #d-shopAll-filter {
+    display: none;
+  }
+  #d-shopAll-filter-mini {
+    display: flex;
+  }
+  #d-shopAll-grid-items {
+    grid-template-columns: 1fr;
+  }
+  .d-slider-product-item {
+    width: 300px;
+    justify-self: center;
+    margin: auto;
+  }
+}

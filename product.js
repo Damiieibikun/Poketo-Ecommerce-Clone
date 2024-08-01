@@ -1,17 +1,17 @@
-$(document).ready(()=>{
+$(document).ready(() => {
     //get all items
-    let products = JSON.parse(localStorage.getItem('Poketo-Products')) || [] 
-            // get selected item
-        let selectedProduct = JSON.parse(localStorage.getItem('Selected-Product'))
-        let showStars = 'flex'
-        if (selectedProduct.quantity === null) {
-            showStars = 'none'
-        }
-        // append to product card
+    let products = JSON.parse(localStorage.getItem('Poketo-Products')) || []
+        // get selected item
+    let selectedProduct = JSON.parse(localStorage.getItem('Selected-Product'))
+    let showStars = 'flex'
+    if (selectedProduct.quantity === null) {
+        showStars = 'none'
+    }
+    // append to product card
 
 
-        $('.jenny-item ').css('background-image', `url(${selectedProduct.img})` )
-        $('#j-selectedProduct-info').html(
+    $('.jenny-item ').css('background-image', `url(${selectedProduct.img})`)
+    $('#j-selectedProduct-info').html(
         ` <div data-id = ${selectedProduct.id}>
         <div class="mustard d-align-center" style="background-color: ${selectedProduct.tagColor};">
           <p>${selectedProduct.tag}</p>
@@ -52,30 +52,32 @@ $(document).ready(()=>{
       `)
 
 
-      let productRating = $('#j-selectedProduct-info').find('.star').find('svg')
-      productRating.each((i, svg) => {
-          $(svg).find('path').css('fill', '#ef4043')
-          if (i === Math.round(selectedProduct.stars) - 1) {
-              return false;
-          }
+    let productRating = $('#j-selectedProduct-info').find('.star').find('svg')
+    productRating.each((i, svg) => {
+        $(svg).find('path').css('fill', '#ef4043')
+        if (i === Math.round(selectedProduct.stars) - 1) {
+            return false;
+        }
 
-      })
-      if ('availableImage' in selectedProduct) {
+    })
+    if ('availableImage' in selectedProduct) {
         selectedProduct.availableImage.forEach((img, i) => {
             $('#j-selectedProduct-info').find('.d-product-colors').append(`<div class="d-color-selection-outer">
                           <div class="d-color-selection" data-id=${i}" style="background-image: url(${img}); background-color: transparent"></div>
                       </div>`)
-          })
-      }
-      if ('availableColors' in selectedProduct) {
+        })
+    }
+    if ('availableColors' in selectedProduct) {
         selectedProduct.availableColors.forEach((color, i) => {
             $('#j-selectedProduct-info').find('.d-product-colors').append(`<div class="d-color-selection-outer">
                           <div class="d-color-selection" data-id=${i}" style="background-image: url(''); background-color: ${color}"></div>
                       </div>`)
-          })
-      }
+        })
+    }
 
-    $('.color2').click(function(){
+    $('#reviewScore').text(selectedProduct.stars)
+
+    $('.color2').click(function() {
         let selectedId = $(this).prev().data('id');
         products.forEach((item) => {
             if (selectedId === item.id) {
@@ -84,5 +86,11 @@ $(document).ready(()=>{
         })
 
         window.location.href = 'product.html'
+    })
+
+    $('.d-product-colors').each((index, i) => {
+        if ($(i).children()[0]) {
+            $(i).children()[0].classList.add('d-selected-color')
+        }  
     })
 })

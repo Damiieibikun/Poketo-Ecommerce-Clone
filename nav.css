@@ -6,10 +6,30 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    font-family: "Sofia Sans", sans-serif;
+    font-family: sofia proRegular;
+}
+
+@font-face {
+  font-family: cardiz;
+  src: url(fonts/cadiz-regular.woff2);
+}
+
+@font-face {
+  font-family: sofia proRegular;
+  src: url(fonts/SofiaProRegular.woff2);
+}
+
+
+@font-face {
+  font-family: sofia proBold;
+  src: url(fonts/SofiaPro-Bold.woff2);
+}
+
+@font-face {
+  font-family: sofia proMedium;
+  src: url(fonts/SofiaProMedium.woff2);
 }
 /* Common styles */
 
@@ -59,8 +79,12 @@ body {
   font-weight: 500;
 }
 
+.d-top-container p{
+  margin: 10px 0;
+  font-family: sofia proRegular;
+}
 .d-fixed-nav {
-  padding: 16px;
+  padding: 10px;
   padding-bottom: 0;
   background: white;
   z-index: 20;
@@ -80,11 +104,17 @@ body {
 }
 
 #d-fixed-container {
-  width: 90%;
+  width: 95%;
   margin: auto;
   justify-content: space-between;
 }
 
+
+
+#d-shop-family{
+  margin-top: 7px;
+  font-family: sofia proRegular;
+}
 #logo-responsive, 
 #d-hamburger-menu, 
 #d-hamburger-menu-icon{
@@ -121,11 +151,18 @@ height: 80vh;
 }
 #d-nav-links {
   list-style: none;
+  padding-left: 8px;
+  margin-bottom: 32px;
+  font-family: sofia proRegular;
+  gap: 25px;
 }
 
 #d-nav-links a {
   color: black;
   text-decoration: none;
+  display: flex;
+  align-items: end;
+  gap: 5px;
 }
 
 #d-nav-links a:hover {
@@ -134,6 +171,7 @@ height: 80vh;
 
 #d-left-nav {
   justify-content: space-between;
+  width: 74%;
 }
 
 #d-right-nav {
@@ -315,6 +353,7 @@ cursor: pointer;
   background-color: white;
   right: 0;
   left: 0;
+  font-family: sofia proRegular;
 }
 
 #d-nav-dropdown-menu {
@@ -335,6 +374,7 @@ cursor: pointer;
 #d-dropdown-shopall-nav ul {
   list-style: none;
   padding: 0;
+  font-family: sofia proBold;
 }
 
 #d-dropdown-shopall-nav ul a {
@@ -380,7 +420,7 @@ footer {
   background-color: #0085ca;
   color: white;
   padding: 20px;
-  font-family: "Signika", sans-serif;
+  font-family: sofia proRegular;
   font-optical-sizing: auto;
   font-style: normal;
   font-variation-settings: "GRAD" 0;
@@ -487,7 +527,20 @@ footer ul a:hover {
 .d-stars{
     color: #dea439;
 }
-
+#d-variantSelection{
+  margin: 0;
+}
+.d-selectedProductSize{
+  padding: 5px;
+  border-radius: 15px;
+  margin: 10px 0;
+}
+.d-selectedProductSize:hover{
+  cursor: pointer;
+}
+.sizeOuter-border{
+  border: 1px solid black;
+}
 /* media queries */
 @media  screen and (max-width: 1024px) and (min-width: 768px) {
   .d-footer-links {
