@@ -184,6 +184,7 @@
 #d-pattern-family {
     padding: 0 0 0 40px;
     margin-left: 35px;
+    padding-bottom: 20px;
 }
 
 .d-hero5-grid button {
@@ -232,7 +233,6 @@
 
 #d-hero5-img {
     background-image: url('https://www.poketo.com/cdn/shop/files/XPB-M-Home-5050-Media-PatternFamily-01-2x.jpg?v=1679056208&width=1070');
-    background-size: contain;
     height: 400px;
 }
 
@@ -500,6 +500,13 @@
     .slick-next {
         display: none !important;
     }
+
+    .d-next-arrow,
+    .d-prev-arrow, 
+    .d-prev-arrow2, 
+    .d-next-arrow2{
+        display: none !important;
+    }
 }
 
 @media screen and (max-width: 1024px) and (min-width:786px) {
@@ -538,6 +545,8 @@
     #d-pattern-family {
         margin-left: 25px;
         padding: 0;
+        padding-bottom: 20px;
+        
     }
 }
 

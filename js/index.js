@@ -358,8 +358,8 @@ $(document).ready(function() {
                 }
             }
         ],
-        prevArrow: '.d-prev-arrow',
-        nextArrow: '.d-next-arrow'
+        prevArrow: '.d-prev-arrow2',
+        nextArrow: '.d-next-arrow2'
     });
 
 
