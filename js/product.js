@@ -77,6 +77,15 @@ $(document).ready(() => {
 
     $('#reviewScore').text(selectedProduct.stars)
 
+    $('.progress-bar').each((index, element)=>{
+        let score = (Math.round(selectedProduct.stars))
+       let element_value = ($(element).data('count'))
+        if(score === element_value){
+            $(element).css('width', `${(selectedProduct.stars/ 5)* 100}%`)
+        }
+        
+    })
+
     $('.color2').click(function() {
         let selectedId = $(this).prev().data('id');
         products.forEach((item) => {

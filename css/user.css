@@ -1,0 +1,135 @@
+@font-face {
+    font-family: cardiz;
+    src: url(fonts/cadiz-regular.woff2);
+}
+
+@font-face {
+    font-family: sofia proBold;
+    src: url(fonts/SofiaPro-Bold.woff2);
+}
+
+@font-face {
+    font-family: sofia proMedium;
+    src: url(fonts/SofiaProMedium.woff2);
+}
+
+#d-userDetails{
+    margin-bottom: 50px;
+    min-height: 50vh;
+}
+#d-userDetailsInfo{
+    grid-template-columns: repeat(2, 1fr);
+    margin: auto;
+    width: 90%;
+}
+
+#d-userDetailsInfo-items{
+    grid-template-rows: repeat(3,1fr); 
+}
+
+#accountInfo{
+    grid-template-columns: 1fr 1fr;
+}
+
+
+.d-userDetailsH1{
+    font-family: sofia proBold;
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.d-userDetailsH2{
+    font-family: sofia proBold;
+    font-size: 2.2rem;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+#d-userslogout-link{
+    color: black;
+    font-size: 16px;
+}
+
+
+.d-likedProductIMG{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70px;
+    width: 70px;
+    position: relative;
+    border-radius:3px;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    -ms-border-radius:3px;
+    -o-border-radius:3px;
+}
+
+
+
+.d-display-none {
+    display: none;
+  }
+  
+
+
+  #d-review-From button{
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: #101010;
+    padding: 10px 40px;
+}
+
+
+.d-listOrders{
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+}
+
+#user-order-historyInfo{
+    background-color: #E5F6FF;
+    border-top-left-radius: 10px;
+    border-top-left-radius: 10px;
+    padding: 10px;
+    font-size: 12px;
+  }
+
+
+  .OrderQ{
+    position: absolute;
+    background-color: #656C70;
+    color: white;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    right: -5px;
+    top: -10px;
+
+}
+
+#divTotal{
+    background-color: #E5F6FF;
+    width: 100%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-bottom: 10px;
+    padding-top: 30px;
+    font-size: 17px;
+}
+
+@media  screen and (max-width: 768px) {
+
+#accountInfo{
+    grid-template-columns: 1fr;
+}
+}

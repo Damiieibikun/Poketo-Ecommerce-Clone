@@ -8,6 +8,12 @@ $(document).ready(function() {
         return re.test(email);
     }
 
+    // Function to validate phone number format
+function validatePhoneNumber(phone) {
+    var re = /^(\+1\s?)?(\(\d{3}\)|\d{3})[\s-]?\d{3}[\s-]?\d{4}$/;
+    return re.test(phone);
+}
+
     // Form submit event
     $("#RegisterForm").on("submit", function(event) {
         console.log('submit triggered')
@@ -21,6 +27,7 @@ $(document).ready(function() {
         var name = $("#name").val().trim();
         var lastname = $("#lastname").val().trim();
         var email = $("#email").val().trim();
+        var phone = $("#phone").val().trim();
         var password = $("#pass").val().trim();
 
         // Validation flag
@@ -47,6 +54,16 @@ $(document).ready(function() {
             $("#invalidEmailError").show();
             isValid = false;
         }
+        // Check if phone is empty
+        else if (phone === "") {
+            $("#pherror").show();
+            isValid = false;
+        } else if (!validatePhoneNumber(phone)) {
+            // Check if phone format is valid
+            $("#invalidPhoneError").show();
+            $("#PhoneOptions").show();
+            isValid = false;
+        }
 
         // Check if password is empty
         else if (password === "") {
@@ -71,6 +88,7 @@ $(document).ready(function() {
                 firstName: $("#name").val(),
                 lastName: $("#lastname").val(),
                 Email: $("#email").val(),
+                Phone: $("#phone").val(),
                 password: $("#pass").val() 
             }
 

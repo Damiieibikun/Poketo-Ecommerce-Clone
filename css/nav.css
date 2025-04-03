@@ -560,7 +560,7 @@ footer ul a:hover {
   #d-hamburger-menu-icon{
     display: flex;
   }
-  .bi-search, .bi-person{
+  .bi-search{
     display: none;
   }
   #d-cart-info{
@@ -586,7 +586,7 @@ footer ul a:hover {
   #d-hamburger-menu-icon{
     display: flex;
   }
-  .bi-search, .bi-person{
+  .bi-search{
     display: none;
   }
   #d-cart-info{

@@ -72,7 +72,7 @@
     display: none;
     margin: 0;
     font-size: 12px;
-    margin-top: -4px;
+    margin-bottom: 4px;
 }
 #RegisterForm{
     display: flex;

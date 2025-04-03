@@ -88,7 +88,12 @@ $(document).ready(() => {
       })
       // redirect to login
   $("#d-account-nav").click(function() {
-      window.location.href = "login.html";
+    if (currentUser === null) {
+        window.location.href = "login.html";
+    }else{
+        window.location.href = "user.html";
+    }
+      
   });
   $("#d-account-logout, #d-login-hamburger").click(function() {
       localStorage.removeItem("CurrentUser");
@@ -176,6 +181,7 @@ $(document).ready(() => {
   $("#d-hamburger-menu-icon").click(function() {
       if (clicked) {
           $("#d-hamburger-menu").animate({ left: "0" });
+          $("#d-hamburger-menu").css("height","90vh");
           $("body").css("overflow", "hidden");
       } else {
           $("#d-hamburger-menu").animate({ left: "-100%" });
@@ -190,7 +196,7 @@ $(document).ready(() => {
       $("#d-cart-contents").css("height", "47vh");
       $("#d-account-logout").hide();
       let firstFour = [...allproducts].splice(0, 4)
-      firstFour.forEach((product, i) => {
+      firstFour?.forEach((product, i) => {
           let productItem = $(`<div class="d-grid d-cart-item-desc">
             <div class="d-flex d-gap-20">
               <img src=${product.img} width="30%">
@@ -239,7 +245,7 @@ $(document).ready(() => {
       })
 
   } else {
-      $("#d-account-nav").hide();
+    //   $("#d-account-nav").hide();
       $("#d-login-hamburger").text("Logout / Account");
       usersItems.forEach((user) => {
           if (currentUser === user.name) {
